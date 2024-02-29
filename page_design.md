@@ -3,6 +3,7 @@
 - Top
 
 - price
+- news page
 
 - map
   
