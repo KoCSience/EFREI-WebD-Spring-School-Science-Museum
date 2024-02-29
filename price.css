@@ -1,18 +1,10 @@
 /* Price Table */
 #price_table table {
   width: 60%;
-  /* 枠線：黒色の実線を1pxの太さで引く */
-  /* border: 1px solid black; */
-  /* 上側にあるタブと1pxだけ重ねるために「-1px」を指定 */
-  /* margin-top: -1px; */
-  /* 内側の余白量 */
-  /* padding: 1em; */
-  /* 背景色：白色 */
-  /* background-color: white; */
-  /* z-indexを調整するために必要 */
-  /* position: relative; */
-  /* 重なり順序を「最も背面」にするため */
-  /* z-index: 0; */
+}
+
+#price_table caption {
+  font-size: 2em;
 }
 
 #price_table th, #price_table td {
