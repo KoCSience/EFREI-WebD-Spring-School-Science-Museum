@@ -2,6 +2,8 @@
 
 - Top
 
+- price
+
 - map
   
   - inner-map
