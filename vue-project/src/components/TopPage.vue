@@ -1,12 +1,48 @@
+<script setup>
+defineProps({
+  msg: {
+    type: String,
+    required: true
+  }
+})
+</script>
+
+<template>
+  <div class="greetings">
+    <h1 class="green">{{ msg }}</h1>
+      <!-- <div class="tab_title">
+        <p id="tabcontrol">
+          <a href="top.html">Top</a>
+          <a href="contents.html">Contents</a>
+          <a href="map.html">Map</a>
+          <a href="events.html">Events</a>
+          <a href="access.html">Access</a>
+          <a href="price.html">Price</a>
+        </p>
+      </div> -->
+      <div id="tabbody">
+        <p>Welcome to See-Through Museum Website</p>
+        <div id="toppage_contents">…… content ……</div>
+        <div id="tabpage_map">…… map ……</div>
+        <div id="tabpage_events">…… events ……</div>
+        <div id="tabpage_access">…… access ……</div>
+        <div id="tabpage_price">…… price ……</div>
+     </div>
+  </div>
+</template>
+
+<style scoped>
 .container{
   width:600px;
   height:auto;
   position: relative;
 }
+
 .container img{
   width:100%;
   height:auto;
 }
+
 h1{
   position: absolute;
   top:50%;
@@ -18,6 +54,13 @@ h1{
   white-space: nowrap;
   color: white;
   -webkit-text-stroke: 1px black;
+}
+
+#img_title {
+  margin-top: 0;
+  width: 100%;
+  height: auto;
+  position: right;
 }
 
 /* ▼タブ */
@@ -48,6 +91,10 @@ h1{
   z-index: 0;              /* 重なり順序を「最も背面」にするため */
 }
 
+#tab_title {
+  margin-top: 0;
+}
+
 body{
   color: blue;
 }
@@ -59,3 +106,4 @@ h1{
 h2{
   color: rgb(255, 0, 0);
 }
+</style>
