@@ -21,7 +21,7 @@ defineProps({
         </p>
       </div> -->
       <div id="tabbody">
-        <div id="toppage_top">Welcome to See-Through Museum Website</div>
+        <p>Welcome to See-Through Museum Website</p>
         <div id="toppage_contents">…… content ……</div>
         <div id="tabpage_map">…… map ……</div>
         <div id="tabpage_events">…… events ……</div>
