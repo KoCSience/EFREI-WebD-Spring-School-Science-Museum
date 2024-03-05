@@ -10,11 +10,7 @@ defineProps({
 <template>
   <div class="greetings">
     <h1 class="green">{{ msg }}</h1>
-    <div class="container">
-        <!-- <img id="img_title" src="img_temp.png"> -->
-        <h1>See-Through Museum</h1>
-      </div>
-      <div class="tab_title">
+      <!-- <div class="tab_title">
         <p id="tabcontrol">
           <a href="top.html">Top</a>
           <a href="contents.html">Contents</a>
@@ -23,7 +19,7 @@ defineProps({
           <a href="access.html">Access</a>
           <a href="price.html">Price</a>
         </p>
-      </div>
+      </div> -->
       <div id="tabbody">
         <div id="toppage_top">Welcome to See-Through Museum Website</div>
         <div id="toppage_contents">…… content ……</div>
