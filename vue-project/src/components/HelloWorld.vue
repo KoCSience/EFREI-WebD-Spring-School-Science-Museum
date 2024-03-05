@@ -10,11 +10,28 @@ defineProps({
 <template>
   <div class="greetings">
     <h1 class="green">{{ msg }}</h1>
-    <h3>
-      You’ve successfully created a project with
-      <a href="https://vitejs.dev/" target="_blank" rel="noopener">Vite</a> +
-      <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>.
-    </h3>
+    <div class="container">
+        <!-- <img id="img_title" src="img_temp.png"> -->
+        <h1>See-Through Museum</h1>
+      </div>
+      <div class="tab_title">
+        <p id="tabcontrol">
+          <a href="top.html">Top</a>
+          <a href="contents.html">Contents</a>
+          <a href="map.html">Map</a>
+          <a href="events.html">Events</a>
+          <a href="access.html">Access</a>
+          <a href="price.html">Price</a>
+        </p>
+      </div>
+      <div id="tabbody">
+        <div id="toppage_top">Welcome to See-Through Museum Website</div>
+        <div id="toppage_contents">…… content ……</div>
+        <div id="tabpage_map">…… map ……</div>
+        <div id="tabpage_events">…… events ……</div>
+        <div id="tabpage_access">…… access ……</div>
+        <div id="tabpage_price">…… price ……</div>
+     </div>
   </div>
 </template>
 
