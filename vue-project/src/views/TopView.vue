@@ -1,9 +1,9 @@
 <script setup>
-import SiteTop from '@/components/SiteTop.vue';
+import TopPage from '@/components/TopPage.vue';
 </script>
 
 <template>
   <main>
-    <SiteTop></SiteTop>
+    <TopPage></TopPage>
   </main>
 </template>
