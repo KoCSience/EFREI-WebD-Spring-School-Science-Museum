@@ -5,7 +5,7 @@
     <img id="img_title" src="../assets/landmap.png" usemap="#image-map">
 
     <map name="image-map" class="image-map" id="image-map">
-      <area id="area_mountain" target="" alt="mountain" title="mountain" href="" coords="85,193,51" shape="circle">
+      <area @mouseover="contentsVisible" @mouseleave="contentsInvisible" id="area_mountain" target="" alt="mountain" title="mountain" href="" coords="85,193,51" shape="circle">
       <area id="area_entrance" target="" alt="entrance" title="entrance" href="" coords="313,403,38" shape="circle">
       <area id="area_castle" target="" alt="castle" title="castle" href="" coords="312,212,32" shape="circle">
       <area id="area_splash_mountain" target="" alt="splash mountain" title="splash mountain" href="" coords="212,184,236,115,92,105,83,138,113,146,137,175" shape="poly">
@@ -23,6 +23,30 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: 'MapView',
+  method: {
+   contentsVisible(event)  {
+    let tooltip = document.getElementById("area_mountain");
+    console.log(tooltip);
+
+    console.log(event.target);
+    const p_element_text = event.target.id.replace("area", "p_map");
+    const p_element = document.getElementById(p_element_text);
+    p_element.classList.add("contents-visible");
+   },
+   contentsInvisible(event) {
+    const p_element_text = event.target.id.replace("area", "p_map");
+    const p_element = document.getElementById(p_element_text);
+    p_element.classList.remove("contents-visible");
+   }
+  },
+};
+
+
+</script>
+
 <style>
 .image-map p {
   display: none;
@@ -32,22 +56,3 @@
   display: block !important;
 }
 </style>
-
-<script>
-window.onload = () => {
-  Array.from(document.getElementById("image-map").children).forEach(element => {
-    const p_element_text = element.id.replace("area", "p_map");
-    const p_element = document.getElementById(p_element_text);
-    console.log(p_element_text);
-    console.log(p_element);
-
-    element.addEventListener('mouseover', () => {
-      p_element.classList.add("contents-visible");
-    });
-
-    element.addEventListener('mouseout', ()=> {
-      p_element.classList.remove("contents-visible");
-    });
-  });
-};
-</script>
