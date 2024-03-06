@@ -19,7 +19,7 @@ defineProps({
           <a href="access.html">Access</a>
           <a href="price.html">Price</a>
         </p>
-      </div> -->
+      </div> 
       <div id="tabbody">
         <p>Welcome to See-Through Museum Website</p>
         <div id="toppage_contents">…… content ……</div>
@@ -27,7 +27,7 @@ defineProps({
         <div id="tabpage_events">…… events ……</div>
         <div id="tabpage_access">…… access ……</div>
         <div id="tabpage_price">…… price ……</div>
-     </div>
+     </div>-->
   </div>
 </template>
 

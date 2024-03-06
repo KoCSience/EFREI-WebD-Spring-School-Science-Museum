@@ -5,51 +5,189 @@ import { RouterLink, RouterView } from 'vue-router'
 <template>
   <header>
     <div class="site-header">
-      <img id="img_title" src="./assets/img_temp.png">
+      <div id="container">
+        <nav>
+          <ul class="menu">
+            <!-- Top -->
+            <li><a href="#"><RouterLink to="/">Top</RouterLink></a>
+              <ul class="menu-child">
+                <li><a href="#">こんな感じで</a></li>
+                <li><a href="#">メニュー表示もできるよ✌</a></li>
+              </ul>
+            </li>
+            <!-- contents -->
+            <li><a href="#"><RouterLink to="/contents">contents</RouterLink></a>
+              <ul class="menu-child">
+                
+              </ul>
+            </li>
+            <!-- map -->
+            <li><a href="#"><RouterLink to="/map">map</RouterLink></a>
+              <ul class="menu-child">
+                
+              </ul>
+            </li>
+            <!-- events -->
+            <li><a href="#"><RouterLink to="/events">events</RouterLink></a>
+              <ul class="menu-child">
+                
+              </ul>
+            </li>
+            <!-- access -->
+            <li><a href="#"><RouterLink to="/access">access</RouterLink></a>
+              <ul class="menu-child">
+                
+              </ul>
+            </li>
+            <!-- price -->
+            <li><a href="#"><RouterLink to="/price">price</RouterLink></a>
+              <ul class="menu-child">
+                
+              </ul>
+            </li>
+          </ul>
+          <!--<div class="box-item"><RouterLink to="/">Top</RouterLink></div>
+          <div class="box-item"><RouterLink to="/contents">contents</RouterLink></div>
+          <div class="box-item"><RouterLink to="/map">map</RouterLink></div>
+          <div class="box-item"><RouterLink to="/events">events</RouterLink></div>
+          <div class="box-item"><RouterLink to="/access">access</RouterLink></div>
+          <div class="box-item"><RouterLink to="/price">price</RouterLink></div>-->
+        </nav>
+        <!-- <p>This is App.</p> -->
+      </div>
+    
+      <img id="img_title" src="./assets/img_top.jpg">
       <h1>See-Through Museum</h1>
     </div>
-    <div class="wrapper">
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/price">Price</RouterLink>
-      </nav>
-      <!-- <p>This is App.</p> -->
-    </div>
   </header>
+  <body>
+    
+  </body>
+  
 
   <RouterView />
 </template>
 
 <style scoped>
-.site-header{
-  width:600px;
-  height:auto;
+  * {
+  margin: 0;
+  padding: 0;
+  line-height: 100%;
+  list-style-type: none;
+  text-decoration: none;
+  font-weight: lighter;
+  }
+
+  .site-header{
+    margin: 0;
+    width:100vw;
+    height:auto;
+    position:relative;
+  }
+
+  .site-header img{
+    width:100%;
+    height:auto;
+  }
+
+  
+
+  body {
+    font-family: sans-serif;
+  }
+
+  h1{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    padding:0;
+    margin:0;
+    font-size:60px;
+    white-space: nowrap;
+    color: white;
+  }
+
+  #img_title {
+    margin-top: 0;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+  }
+
+  #flexbox{
+      display:flex;
+      flex-direction: column;
+      background:#ddd;
+      flex-wrap:nowrap;
+      height:auto;
+      padding:10px;
+  }
+
+  .box-item{
+      background:orange;
+      text-align: center;
+      padding:15px 40px;
+      border:5px solid #ddd;
+  }
+
+  #container {
+  margin: auto;
   position: relative;
-}
+  width: 100vw;
+  min-width: 768px;
+  background-color: #F5F5F5;
+  }
 
-.site-header img{
-  width:100%;
-  height:auto;
-}
+  nav {
+  position: relative;
+  z-index: 999;
+  box-shadow: 0 4px 0.3125rem rgba(0,0,0,.3);
+  }
 
-h1{
-  position: absolute;
-  top:50%;
-  left:50%;
-  transform: translate(-50%,-50%);
-  padding:0;
-  margin:0;
-  font-size:30px;
-  white-space: nowrap;
-  color: white;
-  -webkit-text-stroke: 1px black;
-}
+  .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
 
-#img_title {
-  margin-top: 0;
-  width: 100%;
-  height: auto;
-  position: right;
-}
+  .menu li {
+    position: relative;
+    flex: 1;
+    text-align: center;
+    background-color: #555;
+  }
+
+  .menu a{
+    display: block;
+    padding: 1rem;
+    color: white;
+  }
+
+  .menu a:hover{
+    color: #0080FF;
+    background-color: white;
+  }
+
+  .menu li:hover .menu-child{
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .menu-child {
+    position: absolute;
+    top: 3rem;
+    left: 0px;
+    width: 100%;
+    box-shadow: 0 4px 0.3125rem rgba(0,0,0,.3);
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s;
+  }
+
+  .menu-child li {
+    border-top: 1px dotted silver;
+  }
+
 </style>
