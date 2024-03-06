@@ -14,6 +14,7 @@ import { RouterLink, RouterView } from 'vue-router'
         <RouterLink to="/about">About</RouterLink>
         <RouterLink to="/price">Price</RouterLink>
         <RouterLink to="/map">Map</RouterLink>
+        <RouterLink to="/events">Events</RouterLink>
       </nav>
       <!-- <p>This is App.</p> -->
     </div>
