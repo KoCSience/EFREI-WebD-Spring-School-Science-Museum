@@ -46,12 +46,6 @@ import { RouterLink, RouterView } from 'vue-router'
               </ul>
             </li>
           </ul>
-          <!--<div class="box-item"><RouterLink to="/">Top</RouterLink></div>
-          <div class="box-item"><RouterLink to="/contents">contents</RouterLink></div>
-          <div class="box-item"><RouterLink to="/map">map</RouterLink></div>
-          <div class="box-item"><RouterLink to="/events">events</RouterLink></div>
-          <div class="box-item"><RouterLink to="/access">access</RouterLink></div>
-          <div class="box-item"><RouterLink to="/price">price</RouterLink></div>-->
         </nav>
         <!-- <p>This is App.</p> -->
       </div>
@@ -59,29 +53,31 @@ import { RouterLink, RouterView } from 'vue-router'
       <img id="img_title" src="./assets/img_top.jpg">
       <h1>See-Through Museum</h1>
     </div>
+    <RouterView />
   </header>
-  <body>
-    
-  </body>
-  
-
-  <RouterView />
+  <br>
+  <div class="limited_title">
+    <p>limited time</p>
+    <ul class="limited_content">
+      <li>You can get 100$!</li>
+      <li>You can get 100$!</li>
+    </ul>
+  </div>
 </template>
 
 <style scoped>
   * {
-  margin: 0;
-  padding: 0;
-  line-height: 100%;
-  list-style-type: none;
-  text-decoration: none;
-  font-weight: lighter;
+    margin: 0;
+    padding: 0;
+    line-height: 100%;
+    list-style-type: none;
+    text-decoration: none;
+    font-weight: lighter;
   }
 
   .site-header{
-    margin: 0;
-    width:100vw;
-    height:auto;
+    width:80vw;
+    margin: 0 auto;
     position:relative;
   }
 
@@ -90,15 +86,23 @@ import { RouterLink, RouterView } from 'vue-router'
     height:auto;
   }
 
-  
-
   body {
     font-family: sans-serif;
   }
 
+  .limited_title {
+    text-align: center;
+    font-size: 32pt;
+  }
+
+  .limited_content {
+    text-align: center;
+    font-size: 32pt;
+  }
+
   h1{
     position: absolute;
-    top:50%;
+    top:35%;
     left:50%;
     transform: translate(-50%,-50%);
     padding:0;
@@ -116,34 +120,18 @@ import { RouterLink, RouterView } from 'vue-router'
     background-position: center;
   }
 
-  #flexbox{
-      display:flex;
-      flex-direction: column;
-      background:#ddd;
-      flex-wrap:nowrap;
-      height:auto;
-      padding:10px;
-  }
-
-  .box-item{
-      background:orange;
-      text-align: center;
-      padding:15px 40px;
-      border:5px solid #ddd;
-  }
-
   #container {
-  margin: auto;
-  position: relative;
-  width: 100vw;
-  min-width: 768px;
-  background-color: #F5F5F5;
+    margin: 0 auto;
+    position: relative;
+    width: 80vw;
+    min-width: 768px;
+    background-color: #F5F5F5;
   }
 
   nav {
-  position: relative;
-  z-index: 999;
-  box-shadow: 0 4px 0.3125rem rgba(0,0,0,.3);
+    position: relative;
+    z-index: 999;
+    box-shadow: 0 4px 0.3125rem rgba(0,0,0,.3);
   }
 
   .menu {
@@ -177,7 +165,7 @@ import { RouterLink, RouterView } from 'vue-router'
 
   .menu-child {
     position: absolute;
-    top: 3rem;
+    top: 5rem;
     left: 0px;
     width: 100%;
     box-shadow: 0 4px 0.3125rem rgba(0,0,0,.3);
@@ -189,5 +177,4 @@ import { RouterLink, RouterView } from 'vue-router'
   .menu-child li {
     border-top: 1px dotted silver;
   }
-
 </style>
