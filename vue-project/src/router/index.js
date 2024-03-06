@@ -25,6 +25,11 @@ const router = createRouter({
       path: '/map',
       name: 'map',
       component: () => import('../views/MapView.vue')      
+    },
+    {
+      path: '/access',
+      name: 'access',
+      component: () => import('../views/AccessView.vue')
     }
   ]
 })
