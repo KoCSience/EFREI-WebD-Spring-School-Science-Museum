@@ -53,7 +53,6 @@ import { RouterLink, RouterView } from 'vue-router'
       <img id="img_title" src="./assets/img_top.jpg">
       <h1>See-Through Museum</h1>
     </div>
-    <RouterView />
   </header>
   <br>
   <div class="limited_title">
@@ -63,6 +62,7 @@ import { RouterLink, RouterView } from 'vue-router'
       <li>You can get 100$!</li>
     </ul>
   </div>
+  <RouterView />
 </template>
 
 <style scoped>
