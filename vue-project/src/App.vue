@@ -55,13 +55,6 @@ import { RouterLink, RouterView } from 'vue-router'
     </div>
   </header>
   <br>
-  <div class="limited_title">
-    <p>limited time</p>
-    <ul class="limited_content">
-      <li>You can get 100$!</li>
-      <li>You can get 100$!</li>
-    </ul>
-  </div>
   <RouterView />
 </template>
 

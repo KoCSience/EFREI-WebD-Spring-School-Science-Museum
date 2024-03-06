@@ -9,7 +9,7 @@ defineProps({
 
 <template>
   <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
+    <!-- <h1 class="green">{{ msg }}</h1> -->
       <!-- <div class="tab_title">
         <p id="tabcontrol">
           <a href="top.html">Top</a>
@@ -28,6 +28,13 @@ defineProps({
         <div id="tabpage_access">…… access ……</div>
         <div id="tabpage_price">…… price ……</div>
      </div>-->
+    <div class="limited_title">
+      <p>limited time</p>
+      <ul class="limited_content">
+        <li>You can get 100$!</li>
+        <li>You can get 100$!</li>
+      </ul>
+    </div>
   </div>
 </template>
 
