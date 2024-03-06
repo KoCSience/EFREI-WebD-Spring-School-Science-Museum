@@ -13,13 +13,13 @@
       <area id="area_river" target="" alt="river" title="river" href="" coords="93,303,52" shape="circle">
       <area id="area_city" target="" alt="city" title="city" href="" coords="485,127,75" shape="circle">
     </map>
-    <p id="p_map_mountain">p_map_mountain ホバーされました</p>
-    <p id="p_map_entrance">p_map_entrance ホバーされました</p>
-    <p id="p_map_castle">p_map_castle ホバーされました</p>
-    <p id="p_map_splash_mountain">p_map_splash_mountain ホバーされました</p>
-    <p id="p_map_attraction">p_map_attraction ホバーされました</p>
-    <p id="p_map_river">p_map_river ホバーされました</p>
-    <p id="p_map_city">p_map_city ホバーされました</p>
+    <p id="p_map_mountain">This is the moutain.</p>
+    <p id="p_map_entrance">This is the entrance.</p>
+    <p id="p_map_castle">This is the castle.</p>
+    <p id="p_map_splash_mountain">This is the splash moutain.</p>
+    <p id="p_map_attraction">This is the attraction.</p>
+    <p id="p_map_river">This is the river.</p>
+    <p id="p_map_city">This is the city.</p>
   </div>
 </template>
 
