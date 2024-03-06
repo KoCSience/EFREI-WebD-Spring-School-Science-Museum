@@ -26,21 +26,18 @@
 <script>
 export default {
   name: 'MapView',
-  method: {
-   contentsVisible(event)  {
-    let tooltip = document.getElementById("area_mountain");
-    console.log(tooltip);
-
-    console.log(event.target);
-    const p_element_text = event.target.id.replace("area", "p_map");
-    const p_element = document.getElementById(p_element_text);
-    p_element.classList.add("contents-visible");
-   },
-   contentsInvisible(event) {
-    const p_element_text = event.target.id.replace("area", "p_map");
-    const p_element = document.getElementById(p_element_text);
-    p_element.classList.remove("contents-visible");
-   }
+  methods: {
+    contentsVisible: (event) =>  {
+      console.log(event.target);
+      const p_element_text = event.target.id.replace("area", "p_map");
+      const p_element = document.getElementById(p_element_text);
+      p_element.classList.add("contents-visible");
+     },
+    contentsInvisible: (event) => {
+      const p_element_text = event.target.id.replace("area", "p_map");
+      const p_element = document.getElementById(p_element_text);
+      p_element.classList.remove("contents-visible");
+    }
   },
 };
 
