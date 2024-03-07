@@ -89,15 +89,15 @@ document.addEventListener('DOMContentLoaded', function () {
         <p>詳細5</p>
       </div>
     </div>
-  </div>
-
-  <div class="content">
+  
+    <div class="content">
     <img src="https://images.keizai.biz/akiba_keizai/headline/1627263254_photo.jpg" />
     <p>Retro games</p>
     <button class="detail-button">+</button>
     <div class="detail-content">
       <p>詳細6</p>
     </div>
+  </div>
 
     <!-- 他のコンテンツブロックを追加する場合も、この.container内に配置 -->
   </div>
@@ -118,31 +118,32 @@ document.addEventListener('DOMContentLoaded', function () {
         <p>No colorants</p>
       </div>
     </div>
-  </div>
+    <div class="content">
+      <img
+        src="https://tips.spacely.co.jp/wp-content/uploads/2021/06/shutterstock_402321685-e1624589182233.jpg"
+        alt="透明な食べもの"
+      />
+      <p>Latest games fes</p>
+      <button class="detail-button">+</button>
+      <div class="detail-content">
+        <p>NO CONTENTS</p>
+      </div>
+    </div>
 
-  <div class="content">
-    <img
-      src="https://tips.spacely.co.jp/wp-content/uploads/2021/06/shutterstock_402321685-e1624589182233.jpg"
-      alt="透明な食べもの"
-    />
-    <p>Latest games fes</p>
-    <button class="detail-button">+</button>
-    <div class="detail-content">
-      <p>NO CONTENTS</p>
+    <div class="content">
+      <img
+        src="https://www.veltra.com/jp/guide/wp-content/uploads/2023/10/pixta_43237886_M.jpg"
+        alt="透明な食べもの"
+      />
+      <p>UK collaboration</p>
+      <button class="detail-button">+</button>
+      <div class="detail-content">
+        <p>No colorants</p>
+      </div>
     </div>
   </div>
 
-  <div class="content">
-    <img
-      src="https://www.veltra.com/jp/guide/wp-content/uploads/2023/10/pixta_43237886_M.jpg"
-      alt="透明な食べもの"
-    />
-    <p>UK collaboration</p>
-    <button class="detail-button">+</button>
-    <div class="detail-content">
-      <p>No colorants</p>
-    </div>
-  </div>
+  
 </template>
 
 <style>
