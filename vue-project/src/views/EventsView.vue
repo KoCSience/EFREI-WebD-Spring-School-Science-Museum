@@ -149,14 +149,6 @@ document.addEventListener('DOMContentLoaded', function () {
 </template>
 
 <style>
-body {
-  background-color: black;
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0px;
-  box-sizing: border-box;
-}
-
 /*説明の文字*/
 p {
   color: white;
@@ -210,12 +202,5 @@ h1 {
 .detail-content {
   display: none; /* 初期状態では非表示 */
   padding: 10px;
-}
-
-/*他デバイス用*/
-@media (max-width: 600px) {
-  .content {
-    width: 100%; /* 画面が狭い時は100%の幅 */
-  }
 }
 </style>
