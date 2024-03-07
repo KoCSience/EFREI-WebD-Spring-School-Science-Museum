@@ -25,11 +25,14 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <template>
+<br>
 <h1>SPECIAL EVENT</h1>
+<br>
+
 <div class="container">
   <div class="content">
     <img src="https://www.axismag.jp/axismag-admin/wp-content/uploads/2023/08/DSC3921.jpg" alt="透明な食べもの">
-    <p>see-through food</p>
+    <p>See-through food</p>
     <button class="detail-button">+</button>
     <div class="detail-content">
       <p>No colorants</p>
@@ -38,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   <div class="content">
     <img src="https://mrs.living.cdn.anymanager.io/wp-content/uploads/2022/11/139eaa8d905179c143727e9d3f069727.jpg">
-    <p>illumination</p>
+    <p>Illumination</p>
     <button class="detail-button">+</button>
     <div class="detail-content">
       <p>詳細2</p>
@@ -55,11 +58,11 @@ document.addEventListener('DOMContentLoaded', function() {
    </div>
   
   <div class="content">
-    <img src="https://www.earth-garden.jp/wordpress/wp-content/uploads/2016/01/s1200_unnamed-3-1038x576.jpg" alt="透明な食べもの">
-    <p>Music Fes</p>
+    <img src="https://img01.jalannews.jp/img/2022/10/20221006_okomoriyado_sashikae_009-670x443.jpg" alt="透明な食べもの">
+    <p>Accommodation Campaign</p>
     <button class="detail-button">+</button>
     <div class="detail-content">
-      <p>detail</p>
+      <p>詳細4</p>
     </div>
   </div>
   
@@ -68,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <p>Music Fes</p>
     <button class="detail-button">+</button>
     <div class="detail-content">
-      <p>detail</p>
+      <p>詳細5</p>
     </div>
   </div>
   
@@ -77,19 +80,21 @@ document.addEventListener('DOMContentLoaded', function() {
     <p>Music Fes</p>
     <button class="detail-button">+</button>
     <div class="detail-content">
-      <p>detail</p>
+      <p>詳細6</p>
     </div>
   </div>
 
   <!-- 他のコンテンツブロックを追加する場合も、この.container内に配置 -->
 </div>
   
-  <h1>COMING SOON...</h1>
+<br>
+<h1>COMING SOON...</h1>
+<br>
   
  <div class="container">
   <div class="content">
-    <img src="https://www.axismag.jp/axismag-admin/wp-content/uploads/2023/08/DSC3921.jpg" alt="透明な食べもの">
-    <p>see-through food</p>
+    <img src="https://dol.ismcdn.jp/mwimgs/f/b/650/img_fb9b185f88898099e9a6d8f39e576bf1245244.jpg" alt="透明な食べもの">
+    <p>French collaboration</p>
     <button class="detail-button">+</button>
     <div class="detail-content">
       <p>No colorants</p>
@@ -98,10 +103,10 @@ document.addEventListener('DOMContentLoaded', function() {
    
    <div class="content">
     <img src="https://www.axismag.jp/axismag-admin/wp-content/uploads/2023/08/DSC3921.jpg" alt="透明な食べもの">
-    <p>see-through food</p>
+    <p>French collaboration</p>
     <button class="detail-button">+</button>
     <div class="detail-content">
-      <p>No colorants</p>
+      <p>NO CONTENTS</p>
     </div>
   </div>
    
@@ -134,6 +139,7 @@ p{
   /*個別の文字*/
 h1{
   color: white;
+  margin-top: 100px;
 }
 
   /*コンテンツの箱*/
