@@ -42,6 +42,11 @@ export default {
 </script>
 
 <style>
+#img_title {
+  margin-left: 0;
+  /* margin-right: 0; */
+}
+
 .image-map p {
   display: none;
 }
