@@ -30,15 +30,78 @@ defineProps({
      </div>-->
     <div class="limited_title">
       <p>limited time</p>
-      <ul class="limited_content">
-        <li>You can get 100$!</li>
-        <li>You can get 100$!</li>
-      </ul>
     </div>
+    <ul class="limited_content">
+      <li>You can get 100$!</li>
+      <li>You can get 100$!</li>
+    </ul>
+    
+    <div class="news_title">
+      <p>News</p>
+    </div>
+    <ul class="news_content">
+      <div id="news_container">
+        <nav>
+          <ul class="news_menu">
+            <li>
+              <a href="#">News1............</a>
+            </li>
+            <!-- contents -->
+            <li>
+              <a href="#">News2............</a>
+            </li>
+            <!-- map -->
+            <li>
+              <a href="#">News3............</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- <p>This is App.</p> -->
+      </div>
+    </ul>
+    
+    <div class="price_title">
+      <p>price</p>
+    </div>
+    <ul class="price_content">
+      <li>Children 	: xxx€~</li>
+      <li>Students 	: xxx€~</li>
+      <li>Adults	: xxx€~</li>
+    </ul>
+
+    <div id="access_container">
+      <nav>
+        <ul class="access_menu">
+          <!-- access -->
+          <li>
+            <a href="#"><RouterLink to="/access">Access >></RouterLink></a>
+          </li>
+        </ul>
+      </nav>
+      <!-- <p>This is App.</p> -->
+    </div>
+    
+    <div class="contents_title">
+      <p>contents</p>
+    </div>
+    <ul class="contents_content">
+      <li>You can get 100$!</li>
+      <li>You can get 100$!</li>
+    </ul>
+    
   </div>
 </template>
 
 <style scoped>
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 120%;
+  list-style-type: none;
+  text-decoration: none;
+  font-weight: lighter;
+}
+
 .container {
   width: 600px;
   height: auto;
@@ -68,6 +131,139 @@ h1 {
   width: 100%;
   height: auto;
   position: right;
+}
+
+.limited_title {
+  text-align: center;
+  color: white;
+  font-size: 28pt;
+  text-decoration: underline;
+  text-decoration-color: silver;
+}
+
+.limited_content {
+  text-align: center;
+  font-size: 16pt;
+  color: aqua;
+  text-decoration: underline;
+  text-decoration-color: aqua;
+}
+
+.news_title {
+  text-align: center;
+  color: white;
+  font-size: 28pt;
+  text-decoration: underline;
+  text-decoration-color: silver;
+}
+
+.news_content {
+  text-align: center;
+  font-size: 16pt;
+}
+
+#news_container {
+  margin: 0 auto;
+  position: relative;
+  width: 80vw;
+  min-width: 768px;
+  background-color: #f5f5f5;
+}
+
+nav {
+  position: relative;
+  z-index: 999;
+  box-shadow: 0 4px 0.3125rem black;
+}
+
+.news_menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.news_menu li {
+  position: relative;
+  flex: 1;
+  text-align: center;
+  background-color: white;
+  border: 1px solid #333;
+}
+
+.news_menu a {
+  display: block;
+  padding: 1rem;
+  color: #0080ff;
+}
+
+.news_menu a:hover {
+  color: #0080ff;
+  background-color: white;
+}
+
+.news_menu li:hover .menu-child {
+  visibility: visible;
+  opacity: 1;
+}
+
+.price_title {
+  text-align: center;
+  color: white;
+  font-size: 28pt;
+  text-decoration: underline;
+  text-decoration-color: silver;
+}
+
+.price_content {
+  text-align: center;
+  font-size: 16pt;
+}
+
+#access_container {
+  margin: 0 auto;
+  position: relative;
+  width: 80vw;
+  min-width: 768px;
+  background-color: #f5f5f5;
+}
+
+.access_menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.access_menu li {
+  position: relative;
+  flex: 1;
+  text-align: center;
+  background-color: #555;
+}
+
+.access_menu a {
+  display: block;
+  padding: 1rem;
+  color: #0080ff;
+  font-size: 16pt;
+}
+
+.access_menu a:hover {
+  color: #0080ff;
+  background-color: white;
+}
+
+
+.contents_title {
+  text-align: center;
+  color: white;
+  font-size: 28pt;
+  text-decoration: underline;
+  text-decoration-color: silver;
+}
+
+.contents_content {
+  text-align: center;
+  font-size: 16pt;
 }
 
 /* ▼タブ */
