@@ -89,17 +89,14 @@ document.addEventListener('DOMContentLoaded', function () {
         <p>詳細5</p>
       </div>
     </div>
-
-    <div class="content">
-      <img
-        src="https://www.earth-garden.jp/wordpress/wp-content/uploads/2016/01/s1200_unnamed-3-1038x576.jpg"
-        alt="透明な食べもの"
-      />
-      <p>Music Fes</p>
-      <button class="detail-button">+</button>
-      <div class="detail-content">
-        <p>詳細6</p>
-      </div>
+  </div>
+  
+  <div class="content">
+    <img src="https://images.keizai.biz/akiba_keizai/headline/1627263254_photo.jpg">
+    <p>Retro games</p>
+    <button class="detail-button">+</button>
+    <div class="detail-content">
+      <p>詳細6</p>
     </div>
 
     <!-- 他のコンテンツブロックを追加する場合も、この.container内に配置 -->
@@ -121,29 +118,23 @@ document.addEventListener('DOMContentLoaded', function () {
         <p>No colorants</p>
       </div>
     </div>
-
-    <div class="content">
-      <img
-        src="https://www.axismag.jp/axismag-admin/wp-content/uploads/2023/08/DSC3921.jpg"
-        alt="透明な食べもの"
-      />
-      <p>French collaboration</p>
-      <button class="detail-button">+</button>
-      <div class="detail-content">
-        <p>NO CONTENTS</p>
-      </div>
+  </div>
+   
+   <div class="content">
+    <img src="https://tips.spacely.co.jp/wp-content/uploads/2021/06/shutterstock_402321685-e1624589182233.jpg" alt="透明な食べもの">
+    <p>Latest games fes</p>
+    <button class="detail-button">+</button>
+    <div class="detail-content">
+      <p>NO CONTENTS</p>
     </div>
-
-    <div class="content">
-      <img
-        src="https://www.axismag.jp/axismag-admin/wp-content/uploads/2023/08/DSC3921.jpg"
-        alt="透明な食べもの"
-      />
-      <p>see-through food</p>
-      <button class="detail-button">+</button>
-      <div class="detail-content">
-        <p>No colorants</p>
-      </div>
+  </div>
+   
+   <div class="content">
+    <img src="https://www.veltra.com/jp/guide/wp-content/uploads/2023/10/pixta_43237886_M.jpg" alt="透明な食べもの">
+    <p>UK collaboration</p>
+    <button class="detail-button">+</button>
+    <div class="detail-content">
+      <p>No colorants</p>
     </div>
   </div>
 </template>
@@ -196,12 +187,12 @@ h1 {
 
 .detail-button {
   position: absolute;
-  bottom: 10px;
+  bottom: 0px;
   right: 10px;
   cursor: help;
   background: #fff;
   border: none;
-  padding: 5px 10px;
+  padding: 2px 6px;
   border-radius: 50%;
   font-weight: bold;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
