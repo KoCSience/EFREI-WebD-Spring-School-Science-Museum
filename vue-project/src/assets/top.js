@@ -1,7 +1,7 @@
-let bonjour = document.getElementById('b1');
+let bonjour = document.getElementById('b1')
 
-bonjour.addEventListener('click', alerte);
+bonjour.addEventListener('click', alerte)
 
-function alerte(){
-  alert('Bonjour SRT3!');
+function alerte() {
+  alert('Bonjour SRT3!')
 }

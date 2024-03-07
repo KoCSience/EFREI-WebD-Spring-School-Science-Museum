@@ -7,13 +7,13 @@
   font-size: 2em;
 }
 
-#price_table th, #price_table td {
+#price_table th,
+#price_table td {
   width: 20%;
-  padding : 1em 0.5em;
+  padding: 1em 0.5em;
   /* 枠線：黒色の実線を1pxの太さで引く */
   border: 1px solid black;
 }
-
 
 #price_table div {
   padding-right: 0.5em;
