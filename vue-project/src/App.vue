@@ -18,31 +18,26 @@ import { RouterLink, RouterView } from 'vue-router'
             <!-- contents -->
             <li><a href="#"><RouterLink to="/contents">contents</RouterLink></a>
               <ul class="menu-child">
-                
               </ul>
             </li>
             <!-- map -->
             <li><a href="#"><RouterLink to="/map">map</RouterLink></a>
               <ul class="menu-child">
-                
               </ul>
             </li>
             <!-- events -->
             <li><a href="#"><RouterLink to="/events">events</RouterLink></a>
               <ul class="menu-child">
-                
               </ul>
             </li>
             <!-- access -->
             <li><a href="#"><RouterLink to="/access">access</RouterLink></a>
               <ul class="menu-child">
-                
               </ul>
             </li>
             <!-- price -->
             <li><a href="#"><RouterLink to="/price">price</RouterLink></a>
               <ul class="menu-child">
-                
               </ul>
             </li>
           </ul>
@@ -68,6 +63,10 @@ import { RouterLink, RouterView } from 'vue-router'
     font-weight: lighter;
   }
 
+  body {
+    font-family: sans-serif;
+  }
+
   .site-header{
     width:80vw;
     margin: 0 auto;
@@ -77,10 +76,6 @@ import { RouterLink, RouterView } from 'vue-router'
   .site-header img{
     width:100%;
     height:auto;
-  }
-
-  body {
-    font-family: sans-serif;
   }
 
   .limited_title {
@@ -93,12 +88,12 @@ import { RouterLink, RouterView } from 'vue-router'
     font-size: 32pt;
   }
 
-  h1{
+  h1 {
     position: absolute;
     top:35%;
     left:50%;
     transform: translate(-50%,-50%);
-    padding:0;
+    padding: 0;
     margin:0;
     font-size:60px;
     white-space: nowrap;
@@ -140,18 +135,18 @@ import { RouterLink, RouterView } from 'vue-router'
     background-color: #555;
   }
 
-  .menu a{
+  .menu a {
     display: block;
     padding: 1rem;
     color: white;
   }
 
-  .menu a:hover{
+  .menu a:hover {
     color: #0080FF;
     background-color: white;
   }
 
-  .menu li:hover .menu-child{
+  .menu li:hover .menu-child {
     visibility: visible;
     opacity: 1;
   }
