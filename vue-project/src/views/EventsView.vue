@@ -1,29 +1,4 @@
-<script setup>
-document.addEventListener('DOMContentLoaded', function () {
-  const buttons = document.querySelectorAll('.detail-button')
-
-  buttons.forEach(function (button) {
-    button.addEventListener('click', function () {
-      // 他の全てのdetail-contentを閉じる
-      document.querySelectorAll('.detail-content').forEach(
-        function (detail) {
-          if (detail !== this.nextElementSibling) {
-            detail.style.display = 'none'
-          }
-        }.bind(this)
-      ) // bind this to use in forEach
-
-      // このボタンの隣接するdetail-contentの表示状態を切り替える
-      const detailContent = this.nextElementSibling
-      const isDisplayed = detailContent.style.display === 'block'
-      detailContent.style.display = isDisplayed ? 'none' : 'block'
-
-      // コンテナの高さが調整されるので、ページのレイアウトを再計算する
-      window.dispatchEvent(new Event('resize'))
-    })
-  })
-})
-</script>
+<script setup></script>
 
 <template>
   <br />
@@ -50,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
       <p>Illumination</p>
       <button class="detail-button">+</button>
       <div class="detail-content">
-        <p>詳細2</p>
+        <p>details2</p>
       </div>
     </div>
 
@@ -62,31 +37,31 @@ document.addEventListener('DOMContentLoaded', function () {
       <p>Japan collaboration</p>
       <button class="detail-button">+</button>
       <div class="detail-content">
-        <p>詳細3</p>
+        <p>details3</p>
       </div>
     </div>
 
     <div class="content">
       <img
         src="https://img01.jalannews.jp/img/2022/10/20221006_okomoriyado_sashikae_009-670x443.jpg"
-        alt="透明な食べもの"
+        alt=""
       />
       <p>Accommodation Campaign</p>
       <button class="detail-button">+</button>
       <div class="detail-content">
-        <p>詳細4</p>
+        <p>details4</p>
       </div>
     </div>
 
     <div class="content">
       <img
         src="https://www.earth-garden.jp/wordpress/wp-content/uploads/2016/01/s1200_unnamed-3-1038x576.jpg"
-        alt="透明な食べもの"
+        alt=""
       />
       <p>Music Fes</p>
       <button class="detail-button">+</button>
       <div class="detail-content">
-        <p>詳細5</p>
+        <p>details5</p>
       </div>
     </div>
   </div>
@@ -96,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <p>Retro games</p>
     <button class="detail-button">+</button>
     <div class="detail-content">
-      <p>詳細6</p>
+      <p>details6</p>
     </div>
 
     <!-- 他のコンテンツブロックを追加する場合も、この.container内に配置 -->
@@ -110,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <div class="content">
       <img
         src="https://dol.ismcdn.jp/mwimgs/f/b/650/img_fb9b185f88898099e9a6d8f39e576bf1245244.jpg"
-        alt="透明な食べもの"
+        alt=""
       />
       <p>French collaboration</p>
       <button class="detail-button">+</button>
@@ -123,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function () {
   <div class="content">
     <img
       src="https://tips.spacely.co.jp/wp-content/uploads/2021/06/shutterstock_402321685-e1624589182233.jpg"
-      alt="透明な食べもの"
+      alt=""
     />
     <p>Latest games fes</p>
     <button class="detail-button">+</button>
@@ -135,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function () {
   <div class="content">
     <img
       src="https://www.veltra.com/jp/guide/wp-content/uploads/2023/10/pixta_43237886_M.jpg"
-      alt="透明な食べもの"
+      alt=""
     />
     <p>UK collaboration</p>
     <button class="detail-button">+</button>
