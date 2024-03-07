@@ -170,12 +170,12 @@ h1{
 
 .detail-button {
   position: absolute;
-  bottom: 10px;
+  bottom: 0px;
   right: 10px;
   cursor: help;
   background: #fff;
   border: none;
-  padding: 5px 10px;
+  padding: 2px 6px;
   border-radius: 50%;
   font-weight: bold;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
