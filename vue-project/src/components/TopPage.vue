@@ -54,6 +54,17 @@ defineProps({
             <li>
               <a href="#">News3............</a>
             </li>
+            <li>
+              <a href="#">News4............</a>
+            </li>
+            <!-- contents -->
+            <li>
+              <a href="#">News5............</a>
+            </li>
+            <!-- map -->
+            <li>
+              <a href="#">News6............</a>
+            </li>
           </ul>
         </nav>
         <!-- <p>This is App.</p> -->
@@ -139,6 +150,7 @@ defineProps({
   flex-wrap: wrap;
   justify-content: center; /*中央揃え*/
   gap: 20px; /* コンテンツ間の隙間を設定 */
+  height: 1cm;
 }
 
 .content {
@@ -244,6 +256,8 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  overflow-y: scroll;
+  height: 180px;
 }
 
 .news_menu li {
