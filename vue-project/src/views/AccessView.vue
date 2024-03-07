@@ -20,7 +20,7 @@
     width:200px;
 }
 .googlemap{
-    width: 400px;
+    width: auto;
     height: 350px;
     display: block;
     margin-left: auto;
