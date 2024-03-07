@@ -84,10 +84,42 @@ defineProps({
     <div class="contents_title">
       <p>contents</p>
     </div>
-    <ul class="contents_content">
-      <li>You can get 100$!</li>
-      <li>You can get 100$!</li>
-    </ul>
+    <div class="container">
+    <div class="content">
+      <img
+        src="https://dol.ismcdn.jp/mwimgs/f/b/650/img_fb9b185f88898099e9a6d8f39e576bf1245244.jpg"
+        alt="透明な食べもの"
+      />
+      <p>French collaboration</p>
+      <button class="detail-button">+</button>
+      <div class="detail-content">
+        <p>No colorants</p>
+      </div>
+    </div>
+    <div class="content">
+      <img
+        src="https://tips.spacely.co.jp/wp-content/uploads/2021/06/shutterstock_402321685-e1624589182233.jpg"
+        alt="透明な食べもの"
+      />
+      <p>Latest games fes</p>
+      <button class="detail-button">+</button>
+      <div class="detail-content">
+        <p>NO CONTENTS</p>
+      </div>
+    </div>
+
+    <div class="content">
+      <img
+        src="https://www.veltra.com/jp/guide/wp-content/uploads/2023/10/pixta_43237886_M.jpg"
+        alt="透明な食べもの"
+      />
+      <p>UK collaboration</p>
+      <button class="detail-button">+</button>
+      <div class="detail-content">
+        <p>No colorants</p>
+      </div>
+    </div>
+  </div>
     
   </div>
 </template>
@@ -103,14 +135,46 @@ defineProps({
 }
 
 .container {
-  width: 600px;
-  height: auto;
-  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /*中央揃え*/
+  gap: 20px; /* コンテンツ間の隙間を設定 */
 }
 
-.container img {
-  width: 100%;
-  height: auto;
+.content {
+  border: 0px solid #ddd;
+  position: relative; /* +ボタンを絶対位置で配置するための基準点とする */
+  width: calc(30.333% - 10px); /* 3つ並べるときの幅を計算 */
+  margin-bottom: 10px; /* 下マージン */
+  display: flex; /* フレックスボックスを使用 */
+  flex-direction: column; /* 子要素を縦方向に並べる */
+  justify-content: flex-start; /* 子要素の間隔を最大にする */
+}
+
+.content img {
+  display: block; /* 画像をブロック要素として設定 */
+  width: 100%; /* コンテナの幅に合わせて調整 */
+  height: 200px; /* 画像の高さを統一 */
+  object-fit: cover; /* 画像をコンテナに合わせてトリミング */
+  object-position: flex-start; /* 画像がコンテナの中央に配置されるように調整 */
+}
+
+.detail-button {
+  position: absolute;
+  bottom: 0px;
+  right: 10px;
+  cursor: help;
+  background: #fff;
+  border: none;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.detail-content {
+  display: none; /* 初期状態では非表示 */
+  padding: 10px;
 }
 
 h1 {
@@ -217,6 +281,7 @@ nav {
 .price_content {
   text-align: center;
   font-size: 16pt;
+  color: white;
 }
 
 #access_container {
@@ -264,6 +329,7 @@ nav {
 .contents_content {
   text-align: center;
   font-size: 16pt;
+  color: white;
 }
 
 /* ▼タブ */
