@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function() {
   background-color: black;
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 150px;
+  padding: 0px;
   box-sizing: border-box;
 }
 
