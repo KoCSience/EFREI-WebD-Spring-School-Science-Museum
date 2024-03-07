@@ -19,12 +19,12 @@ const router = createRouter({
     {
       path: '/price',
       name: 'price',
-      component: () => import('../views/PriceView.vue')      
+      component: () => import('../views/PriceView.vue')
     },
     {
       path: '/map',
       name: 'map',
-      component: () => import('../views/MapView.vue')      
+      component: () => import('../views/MapView.vue')
     },
     {
       path: '/access',
@@ -34,7 +34,7 @@ const router = createRouter({
     {
       path: '/events',
       name: 'event',
-      component: () => import('../views/EventsView.vue')      
+      component: () => import('../views/EventsView.vue')
     }
   ]
 })
