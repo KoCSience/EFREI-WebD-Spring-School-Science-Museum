@@ -84,6 +84,7 @@
         shape="circle"
       />
     </map>
+    <!-- <p id="p_map_content">details will be shown</p> -->
     <p id="p_map_mountain">This is the moutain.</p>
     <p id="p_map_entrance">This is the entrance.</p>
     <p id="p_map_castle">This is the castle.</p>
@@ -92,6 +93,8 @@
     <p id="p_map_river">This is the river.</p>
     <p id="p_map_city">This is the city.</p>
   </div>
+  <br />
+  <br />
 </template>
 
 <script>
@@ -113,9 +116,18 @@ export default {
 </script>
 
 <style>
+p {
+  color: white;
+}
+
 #img_title {
   margin-left: 0;
   /* margin-right: 0; */
+  margin-bottom: 0.1em;
+}
+
+.image-map div {
+  margin-bottom: 0.1em;
 }
 
 .image-map p {
