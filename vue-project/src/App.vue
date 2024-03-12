@@ -55,12 +55,25 @@ import { RouterLink, RouterView } from 'vue-router'
   <br />
   <!-- footer -->
   <footer>
-    <ul class="footer-menu">
-     <li>home |</li>
-     <li>about |</li>
-     <li>service |</li>
-     <li>Contact Us</li>
-    </ul>
+    <div id="container">
+        <nav>
+          <ul class="menu">
+            <!-- About us -->
+            <li>
+              <a href="#"><RouterLink to="/">About us</RouterLink></a>
+            </li>
+            <!-- Contact us -->
+            <li>
+              <a href="#"><RouterLink to="/">Contact us</RouterLink></a>
+            </li>
+            <!-- access -->
+            <li>
+              <a href="#"><RouterLink to="/access">Access</RouterLink></a>
+            </li>
+          </ul>
+        </nav>
+        <!-- <p>This is App.</p> -->
+      </div>
     <p>© All rights created by Ko.</p>
   </footer>
 </template>
@@ -152,6 +165,12 @@ nav {
   flex: 1;
   text-align: center;
   background-color: #555;
+  border-left: 1px solid white;
+}
+
+/* 最初の要素には右側の枠線を削除 */
+#container .menu:first-child {
+  border-left: none;
 }
 
 .menu a {
