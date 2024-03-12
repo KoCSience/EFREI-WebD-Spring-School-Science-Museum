@@ -35,7 +35,7 @@ defineProps({
       <li>You can get 100$!</li>
       <li>You can get 100$!</li>
     </ul>
-    
+
     <div class="news_title">
       <p>News</p>
     </div>
@@ -70,14 +70,14 @@ defineProps({
         <!-- <p>This is App.</p> -->
       </div>
     </ul>
-    
+
     <div class="price_title">
       <p>price</p>
     </div>
     <ul class="price_content">
-      <li>Children 	: xxx€~</li>
-      <li>Students 	: xxx€~</li>
-      <li>Adults	: xxx€~</li>
+      <li>Children : xxx€~</li>
+      <li>Students : xxx€~</li>
+      <li>Adults : xxx€~</li>
     </ul>
 
     <div id="access_container">
@@ -91,47 +91,46 @@ defineProps({
       </nav>
       <!-- <p>This is App.</p> -->
     </div>
-    
+
     <div class="contents_title">
       <p>contents</p>
     </div>
     <div class="container">
-    <div class="content">
-      <img
-        src="https://dol.ismcdn.jp/mwimgs/f/b/650/img_fb9b185f88898099e9a6d8f39e576bf1245244.jpg"
-        alt="透明な食べもの"
-      />
-      <p>French collaboration</p>
-      <button class="detail-button">+</button>
-      <div class="detail-content">
-        <p>No colorants</p>
+      <div class="content">
+        <img
+          src="https://dol.ismcdn.jp/mwimgs/f/b/650/img_fb9b185f88898099e9a6d8f39e576bf1245244.jpg"
+          alt="透明な食べもの"
+        />
+        <p>French collaboration</p>
+        <button class="detail-button">+</button>
+        <div class="detail-content">
+          <p>No colorants</p>
+        </div>
       </div>
-    </div>
-    <div class="content">
-      <img
-        src="https://tips.spacely.co.jp/wp-content/uploads/2021/06/shutterstock_402321685-e1624589182233.jpg"
-        alt="透明な食べもの"
-      />
-      <p>Latest games fes</p>
-      <button class="detail-button">+</button>
-      <div class="detail-content">
-        <p>NO CONTENTS</p>
+      <div class="content">
+        <img
+          src="https://tips.spacely.co.jp/wp-content/uploads/2021/06/shutterstock_402321685-e1624589182233.jpg"
+          alt="透明な食べもの"
+        />
+        <p>Latest games fes</p>
+        <button class="detail-button">+</button>
+        <div class="detail-content">
+          <p>NO CONTENTS</p>
+        </div>
       </div>
-    </div>
 
-    <div class="content">
-      <img
-        src="https://www.veltra.com/jp/guide/wp-content/uploads/2023/10/pixta_43237886_M.jpg"
-        alt="透明な食べもの"
-      />
-      <p>UK collaboration</p>
-      <button class="detail-button">+</button>
-      <div class="detail-content">
-        <p>No colorants</p>
+      <div class="content">
+        <img
+          src="https://www.veltra.com/jp/guide/wp-content/uploads/2023/10/pixta_43237886_M.jpg"
+          alt="透明な食べもの"
+        />
+        <p>UK collaboration</p>
+        <button class="detail-button">+</button>
+        <div class="detail-content">
+          <p>No colorants</p>
+        </div>
       </div>
     </div>
-  </div>
-    
   </div>
 </template>
 
@@ -329,7 +328,6 @@ nav {
   color: #0080ff;
   background-color: white;
 }
-
 
 .contents_title {
   text-align: center;
