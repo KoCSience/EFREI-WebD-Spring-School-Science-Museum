@@ -35,7 +35,7 @@ defineProps({
       <li>You can get 100$!</li>
       <li>You can get 100$!</li>
     </ul>
-    
+
     <div class="news_title">
       <p>News</p>
     </div>
@@ -59,14 +59,14 @@ defineProps({
         <!-- <p>This is App.</p> -->
       </div>
     </ul>
-    
+
     <div class="price_title">
       <p>price</p>
     </div>
     <ul class="price_content">
-      <li>Children 	: xxx€~</li>
-      <li>Students 	: xxx€~</li>
-      <li>Adults	: xxx€~</li>
+      <li>Children : xxx€~</li>
+      <li>Students : xxx€~</li>
+      <li>Adults : xxx€~</li>
     </ul>
 
     <div id="access_container">
@@ -80,7 +80,7 @@ defineProps({
       </nav>
       <!-- <p>This is App.</p> -->
     </div>
-    
+
     <div class="contents_title">
       <p>contents</p>
     </div>
@@ -88,7 +88,6 @@ defineProps({
       <li>You can get 100$!</li>
       <li>You can get 100$!</li>
     </ul>
-    
   </div>
 </template>
 
@@ -251,7 +250,6 @@ nav {
   color: #0080ff;
   background-color: white;
 }
-
 
 .contents_title {
   text-align: center;
