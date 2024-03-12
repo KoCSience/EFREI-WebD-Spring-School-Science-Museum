@@ -102,7 +102,12 @@ defineProps({
           alt="透明な食べもの"
         />
         <p>French collaboration</p>
-        <button class="detail-button">+</button>
+        <details>
+        <summary class="detail-button">+</summary>
+        <div><label><input type="checkbox" name="ch1">日本語サイトのみ</label></div>
+        <div><label><input type="checkbox" name="ch2">セーフサーチ無効</label></div>
+        </details>
+        
         <div class="detail-content">
           <p>No colorants</p>
         </div>
@@ -113,7 +118,11 @@ defineProps({
           alt="透明な食べもの"
         />
         <p>Latest games fes</p>
-        <button class="detail-button">+</button>
+        <details>
+        <summary class="detail-button">+</summary>
+        <div><label><input type="checkbox" name="ch1">日本語サイトのみ</label></div>
+        <div><label><input type="checkbox" name="ch2">セーフサーチ無効</label></div>
+        </details>
         <div class="detail-content">
           <p>NO CONTENTS</p>
         </div>
@@ -125,12 +134,17 @@ defineProps({
           alt="透明な食べもの"
         />
         <p>UK collaboration</p>
-        <button class="detail-button">+</button>
+        <details>
+        <summary class="detail-button">+</summary>
+        <div><label><input type="checkbox" name="ch1">日本語サイトのみ</label></div>
+        <div><label><input type="checkbox" name="ch2">セーフサーチ無効</label></div>
+        </details>
         <div class="detail-content">
           <p>No colorants</p>
         </div>
       </div>
     </div>
+    <p class="empty"></p>
   </div>
 </template>
 
@@ -173,10 +187,13 @@ defineProps({
 
 .detail-button {
   position: absolute;
-  bottom: 0px;
+  top: 200px;
   right: 10px;
+  height: 20px;
+  margin: 5px;
   cursor: help;
   background: #fff;
+  color: black;
   border: none;
   padding: 2px 6px;
   border-radius: 50%;
@@ -374,6 +391,10 @@ nav {
 
 #tab_title {
   margin-top: 0;
+}
+
+.empty{
+  margin-bottom: 500px;
 }
 
 body {
