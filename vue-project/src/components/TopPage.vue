@@ -138,7 +138,7 @@ defineProps({
 * {
   margin: 0;
   padding: 0;
-  line-height: 120%;
+  line-height: 1.5;
   list-style-type: none;
   text-decoration: none;
   font-weight: lighter;
@@ -149,11 +149,12 @@ defineProps({
   flex-wrap: wrap;
   justify-content: center; /*中央揃え*/
   gap: 20px; /* コンテンツ間の隙間を設定 */
-  height: 1cm;
+  height: auto;
 }
 
 .content {
   border: 0px solid #ddd;
+  color: white;
   position: relative; /* +ボタンを絶対位置で配置するための基準点とする */
   width: calc(30.333% - 10px); /* 3つ並べるときの幅を計算 */
   margin-bottom: 10px; /* 下マージン */
@@ -255,7 +256,7 @@ nav {
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
-  height: 180px;
+  height: 195px;
 }
 
 .news_menu li {

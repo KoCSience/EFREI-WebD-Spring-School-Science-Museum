@@ -52,6 +52,30 @@ import { RouterLink, RouterView } from 'vue-router'
   </header>
   <br />
   <RouterView />
+  <br />
+  <!-- footer -->
+  <footer>
+    <div id="container">
+      <nav>
+        <ul class="menu">
+          <!-- About us -->
+          <li>
+            <a href="#"><RouterLink to="/">About us</RouterLink></a>
+          </li>
+          <!-- Contact us -->
+          <li>
+            <a href="#"><RouterLink to="/">Contact us</RouterLink></a>
+          </li>
+          <!-- access -->
+          <li>
+            <a href="#"><RouterLink to="/access">Access</RouterLink></a>
+          </li>
+        </ul>
+      </nav>
+      <!-- <p>This is App.</p> -->
+    </div>
+    <p>© All rights created by Ko.</p>
+  </footer>
 </template>
 
 <style scoped>
@@ -104,6 +128,11 @@ h1 {
   font-size: 60px;
   white-space: nowrap;
   color: white;
+  text-shadow:
+    2px 2px 10px #4d9bc1,
+    -2px 2px 10px #4d9bc1,
+    2px -2px 10px #4d9bc1,
+    -2px -2px 10px #4d9bc1;
 }
 
 #img_title {
@@ -140,6 +169,12 @@ nav {
   flex: 1;
   text-align: center;
   background-color: #555;
+  border-left: 1px solid white;
+}
+
+/* 最初の要素には右側の枠線を削除 */
+#container .menu:first-child {
+  border-left: none;
 }
 
 .menu a {
@@ -258,5 +293,16 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+footer {
+  width: 100%;
+  height: 50px;
+  background-color: #174a5c;
+  color: white;
+  text-align: center;
+}
+ul.footer-menu li {
+  display: inline;
 }
 </style>
