@@ -18,6 +18,7 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 5%;
+   /* object-fit: contain; */
 }
 #topPart{
     display: flex;
