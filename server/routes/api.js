@@ -13,7 +13,7 @@ class Panier {
 }
 
 const { Sequelize } = require("sequelize");
-const sequelize = new Sequelize("test", "root", "Shin99", {
+const sequelize = new Sequelize("test", "root", "", {
   dialect: "mysql",
   host: "localhost",
 });
@@ -80,7 +80,7 @@ router.post("/panier", (req, res) => {
 
   //check existence of item in basket
   const articleExistant = panier.find(
-    (articlePanier) => articlePanier.article.id === id,
+    (articlePanier) => articlePanier.article.id === id
   );
   if (articleExistant) {
     //send failure message to user
@@ -180,7 +180,7 @@ router.delete("/panier/:articleId", (req, res) => {
   var panier = req.session.panier.articles;
   const id = parseInt(req.params.articleId);
   const index = panier.findIndex(
-    (articlePanier) => articlePanier.article.id === id,
+    (articlePanier) => articlePanier.article.id === id
   );
   //index = -1 if condition not satisfied
 
@@ -256,7 +256,7 @@ router.post("/article", (req, res) => {
           price +
           "','" +
           image +
-          "');",
+          "');"
       )
       .then(([result, metadata]) => {
         const id = result; //article id
@@ -408,7 +408,7 @@ router.get("/connexion", (req, res) => {
         "SELECT * FROM users WHERE id_user = :id_user",
         {
           replacements: { id_user: req.session.userId },
-        },
+        }
       )
       .then(([result, metadata]) => {
         if (result.length == 0) {
