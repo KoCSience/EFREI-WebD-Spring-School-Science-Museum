@@ -1,18 +1,20 @@
 <template>
   <div class="price">
-        <table id="price_table">
-            <caption><legend>Price</legend></caption>
-            <tr>
-              <th>Children</th>
-              <th>Students</th>
-              <th>Adults</th>
-            </tr>
-            <tr>
-              <td><div>Xxx €</div></td>
-              <td><div>Xxx €</div></td>
-              <td><div>Xxx €</div></td>
-            </tr>
-        </table>
+    <table id="price_table">
+      <caption>
+        <legend>Price</legend>
+      </caption>
+      <tr>
+        <th>Children</th>
+        <th>Students</th>
+        <th>Adults</th>
+      </tr>
+      <tr>
+        <td><div>Xxx €</div></td>
+        <td><div>Xxx €</div></td>
+        <td><div>Xxx €</div></td>
+      </tr>
+    </table>
   </div>
 </template>
 
@@ -34,13 +36,13 @@
   font-size: 2em;
 }
 
-#price_table th, #price_table td {
+#price_table th,
+#price_table td {
   width: 20%;
-  padding : 1em 0.5em;
+  padding: 1em 0.5em;
   /* 枠線：黒色の実線を1pxの太さで引く */
   border: 1px solid black;
 }
-
 
 #price_table div {
   padding-right: 0.5em;
