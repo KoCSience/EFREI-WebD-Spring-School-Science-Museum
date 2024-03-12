@@ -25,7 +25,7 @@ app.use(
     resave: false
   })
 )
-app.use(express.static(path.join(__dirname, '../client')))
+app.use(express.static(path.join(__dirname, '../public')))
 
 app.use('/api/', apiRouter)
 
