@@ -1,6 +1,7 @@
 {
-  "name": "vue-project",
+  "name": "see-through_museum_frontend",
   "version": "0.0.0",
+  "description": "Frontend! using Vite.",
   "private": true,
   "type": "module",
   "scripts": {
