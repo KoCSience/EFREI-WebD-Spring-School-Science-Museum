@@ -56,24 +56,24 @@ import { RouterLink, RouterView } from 'vue-router'
   <!-- footer -->
   <footer>
     <div id="container">
-        <nav>
-          <ul class="menu">
-            <!-- About us -->
-            <li>
-              <a href="#"><RouterLink to="/">About us</RouterLink></a>
-            </li>
-            <!-- Contact us -->
-            <li>
-              <a href="#"><RouterLink to="/">Contact us</RouterLink></a>
-            </li>
-            <!-- access -->
-            <li>
-              <a href="#"><RouterLink to="/access">Access</RouterLink></a>
-            </li>
-          </ul>
-        </nav>
-        <!-- <p>This is App.</p> -->
-      </div>
+      <nav>
+        <ul class="menu">
+          <!-- About us -->
+          <li>
+            <a href="#"><RouterLink to="/">About us</RouterLink></a>
+          </li>
+          <!-- Contact us -->
+          <li>
+            <a href="#"><RouterLink to="/">Contact us</RouterLink></a>
+          </li>
+          <!-- access -->
+          <li>
+            <a href="#"><RouterLink to="/access">Access</RouterLink></a>
+          </li>
+        </ul>
+      </nav>
+      <!-- <p>This is App.</p> -->
+    </div>
     <p>© All rights created by Ko.</p>
   </footer>
 </template>
@@ -128,7 +128,11 @@ h1 {
   font-size: 60px;
   white-space: nowrap;
   color: white;
-  text-shadow: 2px 2px 10px #4d9bc1, -2px 2px 10px #4d9bc1, 2px -2px 10px #4d9bc1, -2px -2px 10px #4d9bc1;
+  text-shadow:
+    2px 2px 10px #4d9bc1,
+    -2px 2px 10px #4d9bc1,
+    2px -2px 10px #4d9bc1,
+    -2px -2px 10px #4d9bc1;
 }
 
 #img_title {
@@ -291,14 +295,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-footer{
-    width: 100%;
-    height: 50px;
-    background-color: #174a5c;
-    color: white;
-    text-align: center;
+footer {
+  width: 100%;
+  height: 50px;
+  background-color: #174a5c;
+  color: white;
+  text-align: center;
 }
 ul.footer-menu li {
-display: inline;
+  display: inline;
 }
 </style>
