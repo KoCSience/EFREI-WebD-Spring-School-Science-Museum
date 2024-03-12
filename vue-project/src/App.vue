@@ -46,7 +46,7 @@ import { RouterLink, RouterView } from 'vue-router'
         <!-- <p>This is App.</p> -->
       </div>
 
-      <img id="img_title" src="./assets/img_top.jpg" />
+      <img id="img_title" src="./assets/img_top2.jpg" />
       <h1>See-Through Museum</h1>
     </div>
   </header>
@@ -96,7 +96,7 @@ import { RouterLink, RouterView } from 'vue-router'
 
 h1 {
   position: absolute;
-  top: 35%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 0;
@@ -109,7 +109,8 @@ h1 {
 #img_title {
   margin-top: 0;
   width: 100%;
-  height: auto;
+  height: 300px;
+  object-fit: cover; /* この一行を追加するだけ！ */
   background-size: cover;
   background-position: center;
 }

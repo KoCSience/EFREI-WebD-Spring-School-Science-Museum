@@ -255,7 +255,6 @@ nav {
 .news_menu {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   overflow-y: scroll;
   height: 180px;
 }
