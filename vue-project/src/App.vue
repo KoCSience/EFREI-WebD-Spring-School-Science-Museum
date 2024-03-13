@@ -42,7 +42,7 @@ import { RouterLink, RouterView } from 'vue-router'
               <ul class="menu-child"></ul>
             </li>
             <li>
-              <a href="#"><RouterLink to="/login">Login</RouterLink></a>
+              <a href="#"><RouterLink to="/login">login</RouterLink></a>
               <ul class="menu-child"></ul>
             </li>
           </ul>
