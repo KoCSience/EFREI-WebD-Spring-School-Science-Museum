@@ -13,7 +13,7 @@ class Panier {
 }
 
 const { Sequelize } = require("sequelize");
-const sequelize = new Sequelize("test", "root", "", {
+const sequelize = new Sequelize("stmuseum", "root", "Idsp91-rtc54O", {
   dialect: "mysql",
   host: "localhost",
 });

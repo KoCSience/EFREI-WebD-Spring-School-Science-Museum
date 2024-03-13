@@ -41,6 +41,11 @@ import { RouterLink, RouterView } from 'vue-router'
               <a href="#"><RouterLink to="/price">price</RouterLink></a>
               <ul class="menu-child"></ul>
             </li>
+
+            <li>
+              <a href="#"><RouterLink to="/login">login</RouterLink></a>
+              <ul class="menu-child"></ul>
+            </li>
           </ul>
         </nav>
         <!-- <p>This is App.</p> -->
