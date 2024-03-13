@@ -57,7 +57,7 @@ import { RouterLink, RouterView } from 'vue-router'
   <footer>
     <div id="container">
       <nav>
-        <ul class="menu">
+        <ul class="footer_menu">
           <!-- About us -->
           <li>
             <a href="#"><RouterLink to="/">About us</RouterLink></a>
@@ -95,6 +95,9 @@ import { RouterLink, RouterView } from 'vue-router'
   .content {
     width: 100%; /* 画面が狭い時は100%の幅 */
   }
+  img {
+    max-width: 100vw;
+  }
 }
 
 .site-header {
@@ -104,7 +107,7 @@ import { RouterLink, RouterView } from 'vue-router'
 }
 
 .site-header img {
-  width: 100%;
+  width: 100vw;
   height: auto;
 }
 
@@ -169,12 +172,7 @@ nav {
   flex: 1;
   text-align: center;
   background-color: #555;
-  border-left: 1px solid white;
-}
-
-/* 最初の要素には右側の枠線を削除 */
-#container .menu:first-child {
-  border-left: none;
+  border-inline: 1px solid white;
 }
 
 .menu a {
@@ -297,11 +295,42 @@ body {
 
 footer {
   width: 100%;
-  height: 10px;
+  height: 30px;
   color: white;
   text-align: center;
 }
 ul.footer-menu li {
   display: inline;
+}
+
+.footer_menu {
+  display: flex;
+  flex-direction: row;
+  background-color: #555;
+  justify-content: space-around;
+  height: 30px;
+  align-items: center;
+}
+
+.footer_menu li {
+  position: relative;
+  flex: 1;
+  background-color: #555;
+  border-inline: 1px solid white;
+  align-items: center;
+}
+
+.footer_menu a {
+  display: block;
+  color: white;
+  padding: 3px;
+  align-items: center;
+}
+
+.footer_menu a:hover {
+  color: #0080ff;
+  background-color: white;
+  padding: 3px;
+  align-items: center;
 }
 </style>
