@@ -357,8 +357,77 @@
       />
     </map>
     <!-- <p id="p_map_content">details will be shown</p> -->
-    <p id="home_1">This is Home 1.</p>
-    <p id="home_2">This is Home 2.</p>
+    <p id="home_1">This is Michelle's house. They are throwing a party, let's join!</p>
+    <p id="home_2">This is Tont's house. They are currently out.</p>
+    <p id="home_3">This is Gulley's house. A lot of games are available here.</p>
+    <p id="home_4">This is Ben's house. They are throwing a party, let's join!</p>
+    <p id="home_5">This is Li's house. They are currently out.</p>
+    <p id="home_6">This is Thiago's house. A lot of games are available here.</p>
+    <p id="home_7">This is Isabella's house. They are throwing a party, let's join!</p>
+    <p id="home_8">This is Emilia's house. They are currently out.</p>
+    <p id="home_9">This is Chioma's house. A lot of games are available here.</p>
+    <p id="home_10">This is Alexander's house. They are throwing a party, let's join!</p>
+
+    <p id="store_1">This is Ocean restaurant. Enjoy the sea breeze with your meal!</p>
+    <p id="store_2">This is Olive Kitchen restaurant. A taste of the Mediterranean awaits!</p>
+    <p id="store_3">This is Baga Burgar restaurant. Home of the juiciest burgers in town!</p>
+    <p id="store_4">This is Seizeria restaurant. Where affordability meets Italian cuisine!</p>
+    <p id="store_5">This is aki restaurant. Traditional flavors in a modern setting!</p>
+    <p id="store_6">This is XAN Curry restaurant. Spices and everything nice!</p>
+    <p id="store_7">This is Pizza bAd restaurant. Where the pizza is as unique as its name!</p>
+
+    <p id="phone_rental">
+      This is Lyca mobile.Rent a smartphone for use inside the museum. One per person, rental is
+      free.
+    </p>
+    <p id="station_nation">
+      This is nation station.Packed with collaborations with manufacturers and vehicles you can't
+      see anywhere else!
+    </p>
+    <p id="souvenir">
+      This is Souvenir house.This is where you can buy souvenirs. Be sure to visit during your
+      museum trip!
+    </p>
+    <p id="medical">
+      This is yamaguchi drug. If you're feeling unwell, come here for free necessary treatments.
+    </p>
+    <p id="ferris_wheel">
+      This is White Ferris Wheel.View the museum from the 80m high ferris wheel! An additional fee
+      of 5 euros per person applies.
+    </p>
+    <p id="warehouse">This is Warehouse.</p>
+    <p id="factory">This is Snack factory. You can watch robots at work!</p>
+    <p id="center_park">This is Central Saint Dogma Park.</p>
+    <p id="hotel">
+      This is Five STAR hotel.Learn about the history of gaming and the computer science technology
+      used here!
+    </p>
+    <p id="park">This is Park.</p>
+
+    <p id="station_citi">
+      This is cit station.Packed with collaborations with manufacturers and vehicles you can't see
+      anywhere else!
+    </p>
+    <p id="station_maxwell">
+      This is maxwell station.Packed with collaborations with manufacturers and vehicles you can't
+      see anywhere else!
+    </p>
+    <p id="station_minwell">
+      This is minwell station.Packed with collaborations with manufacturers and vehicles you can't
+      see anywhere else!
+    </p>
+    <p id="station_airportal">
+      This is airportal station.Packed with collaborations with manufacturers and vehicles you can't
+      see anywhere else!
+    </p>
+    <p id="station_eternal">
+      This is eternal station.Packed with collaborations with manufacturers and vehicles you can't
+      see anywhere else!
+    </p>
+    <p id="airport">
+      This is airport portal.Packed with collaborations with manufacturers and vehicles you can't
+      see anywhere else!
+    </p>
   </div>
   <br />
   <br />
