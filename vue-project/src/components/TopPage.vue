@@ -107,10 +107,9 @@ defineProps({
           <div>説明</div>
           <div>説明</div>
         </details>
-
-        <div class="detail-content">
+        <!-- <div class="detail-content">
           <p>No colorants</p>
-        </div>
+        </div> -->
       </div>
       <div class="content">
         <img
@@ -120,16 +119,12 @@ defineProps({
         <p>Latest games fes</p>
         <details>
           <summary class="detail-button">+</summary>
-          <div>
-            <label><input type="checkbox" name="ch1" />日本語サイトのみ</label>
-          </div>
-          <div>
-            <label><input type="checkbox" name="ch2" />セーフサーチ無効</label>
-          </div>
+          <div>説明</div>
+          <div>説明</div>
         </details>
-        <div class="detail-content">
+        <!-- <div class="detail-content">
           <p>NO CONTENTS</p>
-        </div>
+        </div> -->
       </div>
 
       <div class="content">
@@ -140,16 +135,12 @@ defineProps({
         <p>UK collaboration</p>
         <details>
           <summary class="detail-button">+</summary>
-          <div>
-            <label><input type="checkbox" name="ch1" />日本語サイトのみ</label>
-          </div>
-          <div>
-            <label><input type="checkbox" name="ch2" />セーフサーチ無効</label>
-          </div>
+          <div>説明</div>
+          <div>説明</div>
         </details>
-        <div class="detail-content">
+        <!-- <div class="detail-content"> 
           <p>No colorants</p>
-        </div>
+        </div>-->
       </div>
     </div>
     <p class="empty"></p>
