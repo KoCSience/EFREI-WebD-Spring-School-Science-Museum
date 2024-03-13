@@ -369,14 +369,23 @@ export default {
   name: 'MapView',
   methods: {
     contentsVisible(event) {
-      const p_element_text = event.target.href.split('/')[3]
+      const p_element_text = event.target.href.split('/')[4].replace('map#', '')
+      // console.log('p_element_text', p_element_text)
       const p_element = document.getElementById(p_element_text)
-      p_element.classList.add('contents-visible')
+      if (p_element === null) {
+        console.error('Cannot find id element: ', p_element_text)
+      } else {
+        p_element.classList.add('contents-visible')
+      }
     },
     contentsInvisible(event) {
-      const p_element_text = event.target.href.split('/')[3]
+      const p_element_text = event.target.href.split('/')[4].replace('map#', '')
       const p_element = document.getElementById(p_element_text)
-      p_element.classList.remove('contents-visible')
+      if (p_element === null) {
+        console.error('Cannot find id element: ', p_element_text)
+      } else {
+        p_element.classList.remove('contents-visible')
+      }
     }
   }
 }
