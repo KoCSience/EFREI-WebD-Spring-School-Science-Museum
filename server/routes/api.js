@@ -1,7 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const articles = require("../data/articles.js");
 const bcrypt = require("bcrypt");
+const articles = require("../data/articles.js");
+const dbuser = require("./dbuser.js");
 const saltRounds = 10;
 
 class Panier {
@@ -13,7 +14,7 @@ class Panier {
 }
 
 const { Sequelize } = require("sequelize");
-const sequelize = new Sequelize("stmuseum", "root", "Idsp91-rtc54O", {
+const sequelize = new Sequelize("test", dbuser.user, dbuser.password, {
   dialect: "mysql",
   host: "localhost",
 });

@@ -102,10 +102,14 @@ defineProps({
           alt="透明な食べもの"
         />
         <p>French collaboration</p>
-        <button class="detail-button">+</button>
-        <div class="detail-content">
+        <details>
+          <summary class="detail-button">+</summary>
+          <div>説明</div>
+          <div>説明</div>
+        </details>
+        <!-- <div class="detail-content">
           <p>No colorants</p>
-        </div>
+        </div> -->
       </div>
       <div class="content">
         <img
@@ -113,10 +117,14 @@ defineProps({
           alt="透明な食べもの"
         />
         <p>Latest games fes</p>
-        <button class="detail-button">+</button>
-        <div class="detail-content">
+        <details>
+          <summary class="detail-button">+</summary>
+          <div>説明</div>
+          <div>説明</div>
+        </details>
+        <!-- <div class="detail-content">
           <p>NO CONTENTS</p>
-        </div>
+        </div> -->
       </div>
 
       <div class="content">
@@ -125,12 +133,17 @@ defineProps({
           alt="透明な食べもの"
         />
         <p>UK collaboration</p>
-        <button class="detail-button">+</button>
-        <div class="detail-content">
+        <details>
+          <summary class="detail-button">+</summary>
+          <div>説明</div>
+          <div>説明</div>
+        </details>
+        <!-- <div class="detail-content"> 
           <p>No colorants</p>
-        </div>
+        </div>-->
       </div>
     </div>
+    <p class="empty"></p>
   </div>
 </template>
 
@@ -171,22 +184,29 @@ defineProps({
   object-position: flex-start; /* 画像がコンテナの中央に配置されるように調整 */
 }
 
-.detail-button {
-  position: absolute;
-  bottom: 0px;
-  right: 10px;
-  cursor: help;
-  background: #fff;
-  border: none;
-  padding: 2px 6px;
-  border-radius: 50%;
-  font-weight: bold;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+.content p {
+  font-size: 1.5em;
 }
 
 .detail-content {
   display: none; /* 初期状態では非表示 */
   padding: 10px;
+}
+
+.detail-button {
+  position: absolute;
+  top: 200px;
+  right: 10px;
+  height: 20px;
+  margin: 5px;
+  cursor: help;
+  background: #fff;
+  color: black;
+  border: none;
+  padding: 2px 7px 3px 7px;
+  border-radius: 50%;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
@@ -241,7 +261,7 @@ h1 {
 #news_container {
   margin: 0 auto;
   position: relative;
-  width: 80vw;
+  /* width: 80vw; */
   min-width: 768px;
   background-color: #f5f5f5;
 }
@@ -300,7 +320,6 @@ nav {
 #access_container {
   margin: 0 auto;
   position: relative;
-  width: 80vw;
   min-width: 768px;
   background-color: #f5f5f5;
 }
@@ -374,6 +393,10 @@ nav {
 
 #tab_title {
   margin-top: 0;
+}
+
+.empty {
+  margin-bottom: 500px;
 }
 
 body {
