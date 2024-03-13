@@ -14,8 +14,8 @@
 </template>
 
 <script>
-module.exports ={
-    name: 'login', 
+export default{
+    name: 'Login', 
     props: {
        messageError : {type : String},
        connected: {type: Boolean}
