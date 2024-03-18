@@ -6,7 +6,7 @@
         <div><h2>Station : xxxxxxxxxxx</h2></div>
         <div><h2>Bus : xxxxxxxxxxx</h2></div>
       </div>
-      <div><img src="../assets/mapImg_sample.png" /></div>
+      <div><img class="access_img" src="../assets/mapImg_sample.png" /></div>
     </div>
     <iframe
       class="googlemap"
@@ -45,7 +45,7 @@ h2 {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-img {
+.access_img {
   width: 300px;
   margin-left: auto;
 }

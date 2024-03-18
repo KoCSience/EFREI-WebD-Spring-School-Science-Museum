@@ -176,8 +176,6 @@
 
     <!-- 他のコンテンツブロックを追加する場合も、この.container内に配置 -->
   </div>  
-  <br>
-  <p class="empty"></p>
 </template>
 
 <style>
@@ -240,7 +238,4 @@ h1 {
   padding: 10px;
 }
 
-.empty {
-  margin-bottom: 500px;
-}
 </style>
