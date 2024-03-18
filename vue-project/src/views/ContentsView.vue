@@ -141,10 +141,10 @@
 
     <div class="content">
       <img
-        src="../assets/Stores_and_Restaurants_Area.png"
+        src="../assets/Wheel_Area.png"
         alt="観覧車"
       />
-      <p>Music Fes</p>
+      <p>Ferris Wheel</p>
       <details>
         <summary class="detail-button"></summary>
         <div>
@@ -175,51 +175,7 @@
     </div>
 
     <!-- 他のコンテンツブロックを追加する場合も、この.container内に配置 -->
-  </div>
-
-  <br />
-  <h1>COMING SOON...</h1>
-  <br />
-
-  <div class="container">
-    <div class="content">
-      <img
-        src="https://dol.ismcdn.jp/mwimgs/f/b/650/img_fb9b185f88898099e9a6d8f39e576bf1245244.jpg"
-        alt=""
-      />
-      <p>French collaboration</p>
-      <details>
-        <summary class="detail-button"></summary>
-        <div>説明</div>
-        <div>説明</div>
-      </details>
-    </div>
-    <div class="content">
-      <img
-        src="https://tips.spacely.co.jp/wp-content/uploads/2021/06/shutterstock_402321685-e1624589182233.jpg"
-        alt="透明な食べもの"
-      />
-      <p>Latest games fes</p>
-      <details>
-        <summary class="detail-button"></summary>
-        <div>説明</div>
-        <div>説明</div>
-      </details>
-    </div>
-
-    <div class="content">
-      <img
-        src="https://www.veltra.com/jp/guide/wp-content/uploads/2023/10/pixta_43237886_M.jpg"
-        alt=""
-      />
-      <p>UK collaboration</p>
-      <details>
-        <summary class="detail-button"></summary>
-        <div>説明</div>
-        <div>説明</div>
-      </details>
-    </div>
-  </div>
+  </div>  
   <br>
   <p class="empty"></p>
 </template>
