@@ -392,10 +392,58 @@ router.post("/login", async (req, res) => {
   }
 });
 
+// TODO: 作成中
+// TODO: password to be as hash
+/**
+ * This route allows users to connect
+ */
+router.post("/signup", async (req, res) => {
+  const email = req.body.email;
+  const password = req.body.password;
+
+  try {
+    await sequelize
+      .query("INSERT INTO user (email, password) VALUES :email, :password", {
+        replacements: { email: email, password: password },
+      })
+      .then(([result, metadata]) => {
+        if (result.length == 0) {
+          //verify user existence
+          console.log("False : user does not exist");
+          res.status(404).json({ message: "False : user does not exist" });
+          return;
+        }
+        const user = result[0]; //get user
+        if (user.actif == 0) {
+          //active user
+          console.log("User is not active");
+          res.status(401).json({ message: "User is not active" });
+          return;
+        }
+        if (user.password != password) {
+          //verify password
+          console.log("User password is not correct.");
+          res.status(401).json({ message: "User password is not correct." });
+          return;
+        }
+        req.session.userId = user.id_user; //user login in session
+
+        res.status(201).json({
+          id_user: user.id_user,
+          email: user.email,
+        });
+        return;
+      });
+  } catch (error) {
+    res.status(400).json({ error: "login failed" });
+    return;
+  }
+});
+
 /**
  * This route is used to check the user's connection status
  */
-router.get("/connexion", (req, res) => {
+router.get("/connection", (req, res) => {
   //if the user is not logged in
   if (typeof req.session.userId === "undefined") {
     console.log("user is not connected");
