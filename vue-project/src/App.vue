@@ -72,7 +72,6 @@ import axios from 'axios'
     @login="login"
     @signup="signup"
   ></RouterView>
-  <!-- <RouterView /> -->
   <br />
   <p class="empty"></p>
   <br />

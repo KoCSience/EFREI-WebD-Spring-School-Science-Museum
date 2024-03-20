@@ -15,6 +15,9 @@
       <p>
         <a href="#"><RouterLink to="/signup">signup</RouterLink></a>
       </p>
+      <p>
+        <a href="#"><RouterLink to="/register">register</RouterLink></a>
+      </p>
     </form>
     <div v-else>
       {{ jumpToAcAccueil() }}
