@@ -76,7 +76,7 @@ useBcrypt(User);
   // Table created
   User.create({
     email: "email@jp",
-    password: "password",
+    password: "a",
   });
 
   const users = await User.findAll();
