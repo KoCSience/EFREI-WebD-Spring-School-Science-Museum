@@ -19,7 +19,7 @@ defineProps({
           <a href="access.html">Access</a>
           <a href="price.html">Price</a>
         </p>
-      </div> 
+      </div>
       <div id="tabbody">
         <p>Welcome to See-Through Museum Website</p>
         <div id="toppage_contents">…… content ……</div>
@@ -99,18 +99,23 @@ defineProps({
       <div class="content">
         <img
           src="https://dol.ismcdn.jp/mwimgs/f/b/650/img_fb9b185f88898099e9a6d8f39e576bf1245244.jpg"
-          alt="透明な食べもの"
+          alt=""
         />
         <p>French collaboration</p>
         <details>
           <summary class="detail-button">+</summary>
-          <div>説明</div>
-          <div>説明</div>
+          <div>
+            Delve into the elegance and innovation of French design with our French Collaboration exhibit.
+            This unique section brings to life the transparent wonders of French art, fashion, and technology.
+            From see-through replicas of iconic French fashion pieces that reveal the intricacy of
+            haute couture sewing techniques to transparent models of the TGV (Train à Grande Vitesse),
+            showcasing the sophisticated engineering behind high-speed rail travel.
+            Experience the blend of beauty and functionality in French architecture through crystal-clear models of famous landmarks.
+            This exhibit is a celebration of French creativity, offering a clear view into the country's contributions to art, science, and design.
+          </div>
         </details>
-        <!-- <div class="detail-content">
-          <p>No colorants</p>
-        </div> -->
       </div>
+
       <div class="content">
         <img
           src="https://tips.spacely.co.jp/wp-content/uploads/2021/06/shutterstock_402321685-e1624589182233.jpg"
@@ -119,29 +124,39 @@ defineProps({
         <p>Latest games fes</p>
         <details>
           <summary class="detail-button">+</summary>
-          <div>説明</div>
-          <div>説明</div>
+          <div>
+            Step into the future of gaming at our Latest Games Fes, where the newest video game technologies are revealed in full transparency.
+            This exhibit features see-through gaming consoles, VR headsets, and other cutting-edge devices,
+            allowing visitors to see the inner workings of next-gen gaming.
+            Discover the advanced technology that powers virtual reality, augmented reality, and AI-driven games.
+            Interactive stations provide hands-on experience with the latest games,
+            showcasing the transparent development process from concept to console.
+            It's a gamer's dream, offering a glimpse into the future of the industry through a crystal-clear lens.
+          </div>
         </details>
-        <!-- <div class="detail-content">
-          <p>NO CONTENTS</p>
-        </div> -->
       </div>
 
       <div class="content">
         <img
           src="https://www.veltra.com/jp/guide/wp-content/uploads/2023/10/pixta_43237886_M.jpg"
-          alt="透明な食べもの"
+          alt=""
         />
         <p>UK collaboration</p>
         <details>
           <summary class="detail-button">+</summary>
-          <div>説明</div>
-          <div>説明</div>
+          <div>
+            Explore the intersection of British innovation and transparency at our UK Collaboration exhibit.
+            This section highlights the UK's contributions to science, technology, and culture with a see-through twist.
+            From transparent models of the iconic Mini Cooper and London's double-decker buses
+            that showcase British engineering prowess, to clear representations of the structures
+            of the UK's historic castles and modern architectural marvels, revealing the secrets of their construction.
+            The exhibit also delves into the UK's scientific contributions,
+            with transparent displays of inventions and discoveries that have changed the world.
+            It's a tribute to the UK's past, present, and future, seen through the lens of transparency and clear understanding.
+          </div>
         </details>
-        <!-- <div class="detail-content"> 
-          <p>No colorants</p>
-        </div>-->
       </div>
+      <!-- 他のコンテンツブロックを追加する場合も、この.container内に配置 -->
     </div>
   </div>
 </template>
@@ -184,7 +199,7 @@ defineProps({
 }
 
 .content p {
-  font-size: 1.5em;
+  font-size: 1em;
 }
 
 .detail-content {
