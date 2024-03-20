@@ -53,6 +53,7 @@ import axios from 'axios'
     <div>
       <h3>sum: {{ totalAmount }}￡</h3>
       <button @click="purchase">Purchase</button>
+      <p>user: {{ user.email }}</p>
     </div>
   </div>
 </template>
@@ -60,6 +61,7 @@ import axios from 'axios'
 <script>
 export default {
   name: 'PriceView',
+  props: ['user'],
   data() {
     return {
       cart: {

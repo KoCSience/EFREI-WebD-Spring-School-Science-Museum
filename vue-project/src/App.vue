@@ -68,6 +68,7 @@ import axios from 'axios'
     :connected="connected"
     @login="login"
     @signup="signup"
+    :user="user"
   ></RouterView>
   <br />
   <div style="margin-bottom: 300px"></div>
@@ -176,7 +177,6 @@ export default {
         console.log('error', error)
       }
     }
-    // purchace(user) {}
   }
 }
 </script>
