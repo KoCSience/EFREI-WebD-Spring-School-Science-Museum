@@ -12,10 +12,10 @@
       <details>
         <summary class="detail-button"></summary>
         <div>
-          Details: Dive into the world of transportation machinery that's indispensable to our daily
-          lives, featuring automobiles, indoor trains, and aircraft. Get an unparalleled look at
-          engine structures and motors usually hidden from view. Enjoy exclusive rides on vehicles
-          only available within the museum!
+          Dive into the world of transportation machinery that's indispensable to our daily lives,
+          featuring automobiles, indoor trains, and aircraft. Get an unparalleled look at engine
+          structures and motors usually hidden from view. Enjoy exclusive rides on vehicles only
+          available within the museum!
         </div>
       </details>
     </div>
@@ -26,10 +26,9 @@
       <details>
         <summary class="detail-button"></summary>
         <div>
-          Details: This section visually celebrates the science and technology within homes,
-          offices, and stores. Discover the workings of electrical wiring and various household
-          appliances. The exclusive gadgets corner offers unique home electronics not found anywhere
-          else!
+          This section visually celebrates the science and technology within homes, offices, and
+          stores. Discover the workings of electrical wiring and various household appliances. The
+          exclusive gadgets corner offers unique home electronics not found anywhere else!
         </div>
       </details>
     </div>
@@ -40,9 +39,9 @@
       <details>
         <summary class="detail-button"></summary>
         <div>
-          Details: Observe the cooking and working processes in stores, showcasing the extensive
-          technology involved. Full of intriguing details, these places double as actual restaurants
-          where you can enjoy delicious meals and fun times.
+          Observe the cooking and working processes in stores, showcasing the extensive technology
+          involved. Full of intriguing details, these places double as actual restaurants where you
+          can enjoy delicious meals and fun times.
         </div>
       </details>
     </div>
@@ -53,9 +52,9 @@
       <details>
         <summary class="detail-button"></summary>
         <div>
-          Details: Shop for products made in the museum's factory. Payment is a breeze with the
-          museum's smartphone app, ensuring no long lines. Surprise your family and friends with
-          unique food and electronics only available here!
+          Shop for products made in the museum's factory. Payment is a breeze with the museum's
+          smartphone app, ensuring no long lines. Surprise your family and friends with unique food
+          and electronics only available here!
         </div>
       </details>
     </div>
@@ -66,9 +65,9 @@
       <details>
         <summary class="detail-button"></summary>
         <div>
-          Details: See where the museum's food and select electronics are made. Watch robots at work
-          in vivid detail—a fantastic learning opportunity. Items made here are available for
-          purchase in the souvenir shop.
+          See where the museum's food and select electronics are made. Watch robots at work in vivid
+          detail—a fantastic learning opportunity. Items made here are available for purchase in the
+          souvenir shop.
         </div>
       </details>
     </div>
@@ -79,9 +78,8 @@
       <details>
         <summary class="detail-button"></summary>
         <div>
-          Details: Your first stop should be here to pick up a smartphone, which includes a map and
-          payment functions for use within the museum. Rentals are free and limited to one per
-          person.
+          Your first stop should be here to pick up a smartphone, which includes a map and payment
+          functions for use within the museum. Rentals are free and limited to one per person.
         </div>
       </details>
     </div>
@@ -92,9 +90,9 @@
       <details>
         <summary class="detail-button"></summary>
         <div>
-          Details: This medical space is here if you're feeling unwell, offering free treatment.
-          It's also full of scientific and technological advancements in medical equipment,
-          showcasing cutting-edge technology.
+          This medical space is here if you're feeling unwell, offering free treatment. It's also
+          full of scientific and technological advancements in medical equipment, showcasing
+          cutting-edge technology.
         </div>
       </details>
     </div>
@@ -105,9 +103,9 @@
       <details>
         <summary class="detail-button"></summary>
         <div>
-          Details: There are 18 restrooms throughout the museum, free for use and maintained in
-          pristine condition. They are accessible restrooms, ensuring all visitors can use the
-          facilities comfortably. Don't worry; they're not see-through.
+          There are 18 restrooms throughout the museum, free for use and maintained in pristine
+          condition. They are accessible restrooms, ensuring all visitors can use the facilities
+          comfortably. Don't worry; they're not see-through.
         </div>
       </details>
     </div>
@@ -118,9 +116,9 @@
       <details>
         <summary class="detail-button"></summary>
         <div>
-          Details: Overlook the museum from the ferris wheel. Open to all ages, but note there's a
-          separate charge of 5 euros per person. The highest point is 80m! Be aware that operations
-          may cease abruptly due to bad weather.
+          Overlook the museum from the ferris wheel. Open to all ages, but note there's a separate
+          charge of 5 euros per person. The highest point is 80m! Be aware that operations may cease
+          abruptly due to bad weather.
         </div>
       </details>
     </div>
@@ -131,9 +129,9 @@
       <details>
         <summary class="detail-button"></summary>
         <div>
-          Details: Play on numerous gaming consoles and learn about the history of gaming, along
-          with the computer science technology used in each era. This space features rare gaming
-          consoles no longer for sale and exclusive models only found in the museum.
+          Play on numerous gaming consoles and learn about the history of gaming, along with the
+          computer science technology used in each era. This space features rare gaming consoles no
+          longer for sale and exclusive models only found in the museum.
         </div>
         <div>説明</div>
       </details>
