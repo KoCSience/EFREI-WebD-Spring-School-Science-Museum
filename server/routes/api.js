@@ -34,7 +34,7 @@ const sequelize = new Sequelize({
 });
 
 const User = sequelize.define(
-  "User",
+  "users",
   {
     // Model attributes are defined here
     id_user: {
@@ -74,6 +74,48 @@ useBcrypt(User);
   users.forEach((user) => {
     console.log("user:", user.email, user.password);
   });
+})();
+
+const Article = sequelize.define("Articles", {
+  name: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  description: {
+    type: DataTypes.STRING,
+  },
+  image: {
+    type: DataTypes.STRING,
+  },
+  price: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+  },
+  articleId: {
+    type: DataTypes.VIRTUAL,
+    get() {
+      return this.id;
+    },
+  },
+  id: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    primaryKey: true,
+  },
+  createdAt: false,
+  updatedAt: false,
+});
+
+(async () => {
+  await Article.sync({ force: true }); // will delete old one.
+  // Table created
+  // initialize
+  articles.forEach((article) => {
+    Article.create(article);
+  });
+
+  // const found_articles = await Article.findAll();
+  // console.log("articles:", found_articles);
 })();
 
 /**
@@ -173,6 +215,7 @@ router.post("/signup", async (req, res) => {
 /**
  * This route is used to check the user's connection status
  */
+// not using
 router.get("/connecion", (req, res) => {
   //if the user is not logged in
   if (typeof req.session.userId === "undefined") {
