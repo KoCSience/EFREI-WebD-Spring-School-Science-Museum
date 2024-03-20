@@ -2,9 +2,9 @@
   <div class="access">
     <div id="topPart">
       <div id="discription">
-        <div><h2>Address : xxxxxxxxxxx</h2></div>
-        <div><h2>Station : xxxxxxxxxxx</h2></div>
-        <div><h2>Bus : xxxxxxxxxxx</h2></div>
+        <div><h2>Address : 48 Hopton St, London SE1 9JB UK</h2></div>
+        <div><h2>Station : Blackfriars Station</h2></div>
+        <div><h2>Bus : Blackfriars Station South Entrance</h2></div>
       </div>
       <br />
 

@@ -4,32 +4,32 @@
       <div class="purchase_item">
         Entry
         <div>
-          adlut - 30€ <button @click="increment(0)">＋</button>
+          adlut - 30￡ <button @click="increment(0)">＋</button>
           {{ counts[0] }}
           <button @click="decrement(0)">－</button>
         </div>
         <div>
-          student - 20€ <button @click="increment(1)">＋</button>
+          student - 20￡ <button @click="increment(1)">＋</button>
           {{ counts[1] }}
           <button @click="decrement(1)">－</button>
         </div>
         <div>
-          child - 10€ <button @click="increment(2)">＋</button>
+          child - 10￡ <button @click="increment(2)">＋</button>
           {{ counts[2] }}
           <button @click="decrement(2)">－</button>
         </div>
       </div>
       <div class="purchase_item">
-        Event1 - 10€ <button @click="increment(3)">＋</button> {{ counts[3] }}
+        Event1 - 10￡ <button @click="increment(3)">＋</button> {{ counts[3] }}
         <button @click="decrement(3)">－</button>
       </div>
       <div class="purchase_item">
-        Event2 - 5€ <button @click="increment(4)">＋</button> {{ counts[4] }}
+        Event2 - 5￡ <button @click="increment(4)">＋</button> {{ counts[4] }}
         <button @click="decrement(4)">－</button>
       </div>
     </div>
     <div>
-      <h3>sum: {{ totalAmount }}€</h3>
+      <h3>sum: {{ totalAmount }}￡</h3>
       <button @click="purchase">Purchase</button>
     </div>
   </div>
@@ -37,42 +37,39 @@
 
 <script>
 export default {
-  name: "PriceView",
+  name: 'PriceView',
   data() {
     return {
       // Entryの大人、子供、学生、Event1、Event2の数量
       counts: [0, 0, 0, 0, 0],
       // Entryの大人、子供、学生、Event1、Event2の価格
-      prices: [30, 20, 10, 10, 5],
-    };
+      prices: [30, 20, 10, 10, 5]
+    }
   },
   computed: {
     totalAmount() {
-      return this.counts.reduce(
-        (total, count, index) => total + count * this.prices[index],
-        0
-      );
-    },
+      return this.counts.reduce((total, count, index) => total + count * this.prices[index], 0)
+    }
   },
   methods: {
     increment(index) {
-      this.counts[index]++;
+      this.counts[index]++
     },
     decrement(index) {
       if (this.counts[index] > 0) {
-        this.counts[index]--;
+        this.counts[index]--
       }
     },
     purchase() {
       if (this.totalAmount > 0) {
-        alert(`You purchased tickets for a total of ${this.totalAmount}€.`);
-        this.counts = [0, 0, 0, 0, 0]; // 購入後、数量をリセット
+        alert(`You purchased tickets for a total of ${this.totalAmount}￡.`)
+        this.counts = [0, 0, 0, 0, 0] // 購入後、数量をリセット
       } else {
-        alert("購入するチケットの枚数を選択してください。");
+        alert('購入するチケットの枚数を選択してください。')
       }
-    },
-  },
-};
+    }
+  }
+}
 </script>
 
 <style>
@@ -80,7 +77,7 @@ export default {
 body {
   background-color: #000; /* 背景色を黒に */
   color: #fff; /* テキスト色を白に */
-  font-family: "Arial", sans-serif;
+  font-family: 'Arial', sans-serif;
 }
 
 /* 購入アイテムと数量調整セクションのスタイリング */

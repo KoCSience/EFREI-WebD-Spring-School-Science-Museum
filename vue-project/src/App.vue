@@ -73,6 +73,9 @@ import axios from 'axios'
     @signup="signup"
   ></RouterView>
   <br />
+  <div style="margin-bottom: 300px"></div>
+
+  <br />
   <!-- footer -->
   <footer>
     <div id="container">
