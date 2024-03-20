@@ -4,6 +4,7 @@ const bcrypt = require("bcrypt");
 const useBcrypt = require("sequelize-bcrypt");
 const articles = require("../data/articles.js");
 // const dbuser = require("./dbuser.js");
+const utils = require("../utils.js");
 const saltRounds = 10;
 
 class Panier {
@@ -36,9 +37,17 @@ const sequelize = new Sequelize({
 const User = sequelize.define(
   "users",
   {
-    // Model attributes are defined here
     id_user: {
+      type: DataTypes.VIRTUAL,
+      get() {
+        return this.id;
+      },
+    },
+    id: {
       type: DataTypes.INTEGER,
+      allowNull: false,
+      autoIncrement: true,
+      primaryKey: true,
     },
     email: {
       type: DataTypes.STRING,
@@ -218,10 +227,11 @@ router.post("/signup", async (req, res) => {
 // not using
 router.get("/connecion", (req, res) => {
   //if the user is not logged in
-  if (typeof req.session.userId === "undefined") {
+  if (utils.isNullOrUndefined(req.session.userId)) {
     console.log("user is not connected");
     return;
   }
+  console.log("connection get", req.session.userId);
 
   try {
     sequelize
