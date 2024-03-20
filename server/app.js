@@ -27,6 +27,12 @@ app.use(
 );
 
 app.use(express.static(path.join(__dirname, "../vue-project/dist"))); // frontend
+app.get(/.*/, (req, res) => {
+  res.sendFile(path.join(__dirname, "../vue-project/dist/index.html"));
+});
+app.get("favicon.ico", (req, res) => {
+  res.sendFile(path.join(__dirname, "../vue-project/dist/favicon.ico"));
+});
 
 app.use("/api/", apiRouter);
 
