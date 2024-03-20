@@ -63,7 +63,7 @@ import axios from 'axios'
   <br />
   <RouterView
     :articles="articles"
-    :panier="panier"
+    :basket="basket"
     :message-error="messageError"
     :connected="connected"
     @add-article="addArticle"
@@ -107,7 +107,7 @@ export default {
   data: () => {
     return {
       articles: [],
-      panier: {
+      basket: {
         createdAt: null,
         updatedAt: null,
         articles: []
@@ -141,8 +141,8 @@ export default {
         console.log('error', error)
       }
     }
-    // const res2 = await axios.get('/api/panier')
-    // this.panier = res2.data
+    // const res2 = await axios.get('/api/basket')
+    // this.basket = res2.data
     console.log('connected: ', this.connected)
   },
   methods: {
