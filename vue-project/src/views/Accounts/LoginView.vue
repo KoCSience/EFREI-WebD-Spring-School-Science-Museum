@@ -6,12 +6,15 @@
       <input
         name="password"
         type="password"
-        placeholder="mot de passe"
+        placeholder="put in your password"
         v-model="user.password"
         required
       />
       <button type="submit">Log in</button>
       <p v-text="messageError"></p>
+      <p>
+        <a href="#"><RouterLink to="/signup">signup</RouterLink></a>
+      </p>
     </form>
     <div v-else>
       {{ jumpToAcAccueil() }}
@@ -36,6 +39,7 @@ export default {
   },
   methods: {
     connect() {
+      console.log('Login vue HELLO')
       this.$emit('login', this.user)
     },
     jumpToAcAccueil() {

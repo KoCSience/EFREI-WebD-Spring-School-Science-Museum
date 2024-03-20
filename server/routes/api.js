@@ -1,8 +1,9 @@
 const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcrypt");
+const useBcrypt = require("sequelize-bcrypt");
 const articles = require("../data/articles.js");
-const dbuser = require("./dbuser.js");
+// const dbuser = require("./dbuser.js");
 const saltRounds = 10;
 
 class Panier {
@@ -13,35 +14,219 @@ class Panier {
   }
 }
 
-const { Sequelize } = require("sequelize");
-const sequelize = new Sequelize("test", dbuser.user, dbuser.password, {
-  dialect: "mysql",
-  host: "localhost",
+// const { Sequelize } = require("sequelize");
+// const sequelize = new Sequelize("test", dbuser.user, dbuser.password, {
+//   dialect: "mysql",
+//   host: "localhost",
+// });
+// try {
+//   sequelize.authenticate();
+//   console.log("Connected to the data base !");
+// } catch (error) {
+//   console.error("Unable to connect, next error :", error);
+// }
+
+const { Sequelize, DataTypes } = require("sequelize");
+
+const sequelize = new Sequelize({
+  dialect: "sqlite",
+  storage: ":memory:",
 });
 
-try {
-  sequelize.authenticate();
-  console.log("Connected to the data base !");
-} catch (error) {
-  console.error("Unable to connect, next error :", error);
-}
+const User = sequelize.define(
+  "User",
+  {
+    // Model attributes are defined here
+    id_user: {
+      type: DataTypes.INTEGER,
+    },
+    email: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    password: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+  },
+  {
+    // Other model options go here
+  }
+);
+
+useBcrypt(User);
+
+/*
+    User.sync() - This creates the table if it doesn't exist (and does nothing if it already exists)
+    User.sync({ force: true }) - This creates the table, dropping it first if it already existed
+    User.sync({ alter: true }) - This checks what is the current state of the table in the database (which columns it has, what are their data types, etc), and then performs the necessary changes in the table to make it match the model.
+*/
+
+(async () => {
+  await User.sync();
+  // Table created
+  User.create({
+    email: "email@jp",
+    password: "password",
+  });
+
+  const users = await User.findAll();
+  users.forEach((user) => {
+    console.log("user:", user.email, user.password);
+  });
+})();
 
 /**
  * In this file you'll find examples of GET, POST, PUT and DELETE requests.
-* These requests concern the addition or deletion of items on the site.
-* Your objective is, by learning from the examples in this file, to create the API for the user's shopping cart.
-
+ * These requests concern the addition or deletion of items on the site.
+ * Your objective is, by learning from the examples in this file, to create the API for the user's shopping cart.
  */
 
 /**
  * Our mechanism for saving users' baskets will be to simply assign them a basket using req.session, without any special authentication.
  */
 router.use((req, res, next) => {
+  console.log("TEST NO BUSKET");
   // user is not recognized, assign a basket in req.session
   if (typeof req.session.panier === "undefined") {
     req.session.panier = new Panier();
   }
   next();
+});
+
+/**
+ * This route allows users to connect
+ */
+router.post("/login", async (req, res) => {
+  const email = req.body.email;
+  const password = req.body.password;
+  console.log("login post");
+
+  try {
+    const result = await User.findOne({
+      where: { email: email },
+    });
+    if (result === null) {
+      //verify user existence
+      console.log("False : user does not exist");
+      res.status(404).json({ message: "False : user does not exist" });
+      return;
+    }
+    const user = result; //get user, non null
+    // if (user.actif == 0) {
+    //   //active user
+    //   console.log("User is not active");
+    //   res.status(401).json({ message: "User is not active" });
+    //   return;
+    // }
+
+    if (user.authenticate(password)) {
+      // login success
+      req.session.userId = user.id_user; //user login in session
+      res.status(201).json({
+        id_user: user.id_user,
+        email: user.email,
+      });
+      return;
+    } else {
+      //verify password
+      console.log("User password is not correct.");
+      res.status(401).json({ message: "User password is not correct." });
+      return;
+    }
+  } catch (error) {
+    res.status(400).json({ error: "login failed" });
+    return;
+  }
+});
+
+router.get("/login", (req, res) => {
+  console.log("get router login");
+});
+
+// TODO: 作成中
+// TODO: password to be as hash
+/**
+ * This route allows users to connect
+ */
+router.post("/signup", async (req, res) => {
+  console.log("signup post");
+  const email = req.body.email;
+  const password = req.body.password;
+
+  (async () => {
+    User.sync();
+    // Table created
+    User.create({
+      email: email,
+      password: password,
+    }); // password will be hased by sequelize-bcrypt.
+
+    // TODO
+    const users = await User.findAll();
+    users.forEach((user) => {
+      console.log("user:", user.email, user.password);
+    });
+  })();
+});
+
+/**
+ * This route is used to check the user's connection status
+ */
+router.get("/connecion", (req, res) => {
+  //if the user is not logged in
+  if (typeof req.session.userId === "undefined") {
+    console.log("user is not connected");
+    return;
+  }
+
+  try {
+    sequelize
+      .query(
+        //retrieve user's email address
+        "SELECT * FROM users WHERE id_user = :id_user",
+        {
+          replacements: { id_user: req.session.userId },
+        }
+      )
+      .then(([result, metadata]) => {
+        if (result.length == 0) {
+          //verify user existence
+          console.log("Fasle :user does not exist");
+          res.status(404).json({ message: "Fasle : user does not exist" });
+          return;
+        }
+        const user = result[0]; //get user
+        res.status(200).json({
+          //send user information to front-end
+          id_user: user.id_user,
+          email: user.email,
+        });
+        return;
+      });
+  } catch (error) {
+    //send failure message to user
+    res.status(400).json({ error: "Unable to find user" });
+    return;
+  }
+});
+
+/**
+ * This route allows the user to disconnect
+ */
+router.get("/deconnecion", (req, res) => {
+  //if the user is not logged in
+  if (typeof req.session.userId != "undefined") {
+    //free session to disconnect
+    req.session.destroy();
+
+    //send success message to user
+    res.status(200).json({ message: "deconneted" });
+    return;
+  }
+  //send error message to user
+  res.status(400).json({ message: "User not logged in" });
+  return;
 });
 
 /*
@@ -346,157 +531,16 @@ router
     res.send();
   });
 
-/**
- * This route allows users to connect
- */
-router.post("/login", async (req, res) => {
-  const email = req.body.email;
-  const password = req.body.password;
+// not using
+async function hash(password) {
+  const hashedPassword = await new Promise((resolve, reject) => {
+    bcrypt.hash(password, saltRounds, (err, hash) => {
+      if (err) reject(err);
+      else resolve(hash);
+    });
+  });
 
-  try {
-    await sequelize
-      .query("SELECT * FROM user WHERE email = :email", {
-        replacements: { email: email },
-      })
-      .then(([result, metadata]) => {
-        if (result.length == 0) {
-          //verify user existence
-          console.log("False : user does not exist");
-          res.status(404).json({ message: "False : user does not exist" });
-          return;
-        }
-        const user = result[0]; //get user
-        if (user.actif == 0) {
-          //active user
-          console.log("User is not active");
-          res.status(401).json({ message: "User is not active" });
-          return;
-        }
-        if (user.password != password) {
-          //verify password
-          console.log("User password is not correct.");
-          res.status(401).json({ message: "User password is not correct." });
-          return;
-        }
-        req.session.userId = user.id_user; //user login in session
-
-        res.status(201).json({
-          id_user: user.id_user,
-          email: user.email,
-        });
-        return;
-      });
-  } catch (error) {
-    res.status(400).json({ error: "login failed" });
-    return;
-  }
-});
-
-// TODO: 作成中
-// TODO: password to be as hash
-/**
- * This route allows users to connect
- */
-router.post("/signup", async (req, res) => {
-  const email = req.body.email;
-  const password = req.body.password;
-
-  try {
-    await sequelize
-      .query("INSERT INTO user (email, password) VALUES :email, :password", {
-        replacements: { email: email, password: password },
-      })
-      .then(([result, metadata]) => {
-        if (result.length == 0) {
-          //verify user existence
-          console.log("False : user does not exist");
-          res.status(404).json({ message: "False : user does not exist" });
-          return;
-        }
-        const user = result[0]; //get user
-        if (user.actif == 0) {
-          //active user
-          console.log("User is not active");
-          res.status(401).json({ message: "User is not active" });
-          return;
-        }
-        if (user.password != password) {
-          //verify password
-          console.log("User password is not correct.");
-          res.status(401).json({ message: "User password is not correct." });
-          return;
-        }
-        req.session.userId = user.id_user; //user login in session
-
-        res.status(201).json({
-          id_user: user.id_user,
-          email: user.email,
-        });
-        return;
-      });
-  } catch (error) {
-    res.status(400).json({ error: "login failed" });
-    return;
-  }
-});
-
-/**
- * This route is used to check the user's connection status
- */
-router.get("/connection", (req, res) => {
-  //if the user is not logged in
-  if (typeof req.session.userId === "undefined") {
-    console.log("user is not connected");
-    return;
-  }
-
-  try {
-    sequelize
-      .query(
-        //retrieve user's email address
-        "SELECT * FROM users WHERE id_user = :id_user",
-        {
-          replacements: { id_user: req.session.userId },
-        }
-      )
-      .then(([result, metadata]) => {
-        if (result.length == 0) {
-          //verify user existence
-          console.log("Fasle :user does not exist");
-          res.status(404).json({ message: "Fasle : user does not exist" });
-          return;
-        }
-        const user = result[0]; //get user
-        res.status(200).json({
-          //send user information to front-end
-          id_user: user.id_user,
-          email: user.email,
-        });
-        return;
-      });
-  } catch (error) {
-    //send failure message to user
-    res.status(400).json({ error: "Unable to find user" });
-    return;
-  }
-});
-
-/**
- * This route allows the user to disconnect
- */
-router.get("/deconnexion", (req, res) => {
-  //if the user is not logged in
-  if (typeof req.session.userId != "undefined") {
-    //free session to disconnect
-    req.session.destroy();
-
-    //send success message to user
-    res.status(200).json({ message: "deconneted" });
-    return;
-  }
-  //send error message to user
-  res.status(400).json({ message: "User not logged in" });
-  return;
-});
+  return hashedPassword;
+}
 
 module.exports = router;

@@ -1,6 +1,6 @@
 <template>
   <article>
-    <form id="formulaire-login" @submit.prevent="signup" v-if="!connected">
+    <form id="formulaire-login" @submit.prevent="callSignup" v-if="!connected">
       <h2>Signup</h2>
       <input name="email" type="email" placeholder="* E-mail " v-model="user.email" required />
       <input
@@ -35,7 +35,8 @@ export default {
     }
   },
   methods: {
-    connect() {
+    callSignup() {
+      console.log('Signup vue HELLO')
       this.$emit('signup', this.user)
     },
     jumpToAcAccueil() {
