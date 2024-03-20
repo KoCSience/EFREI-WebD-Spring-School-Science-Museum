@@ -2,7 +2,19 @@ const express = require("express");
 const router = express.Router();
 // const { Sequelize, DataTypes } = require("sequelize");
 // const { sequelize } = require("./api");
-// const { router } = require("./api");
+// const {  } = require("./api");
+
+// const Carts = sequelize.define("carts", {
+//   user_email: {
+//     type: DataTypes.STRING,
+//     set(user) {
+//       this.setDataValue(user.email);
+//     },
+//   },
+//   total: {
+//     type: DataTypes.INTEGER,
+//   },
+// });
 
 class Cart {
   constructor() {
@@ -33,6 +45,7 @@ router.post("/purchace", (req, res) => {
   const reqCounts = reqCart.counts;
   const reqPrices = reqCart.prices;
   const reqTotal = req.body.total;
+  const reqUser = req.body.user;
 
   if (this.prices == reqPrices) {
     console.log("this price and req price is same. OK.");
@@ -50,6 +63,11 @@ router.post("/purchace", (req, res) => {
     return;
   }
 
+  // success
+  // Carts.update({
+  //   user_email: reqUser.email,
+  //   total: total,
+  // });
   res.status(200).json({
     message: "Success to buy: " + total,
     counts: reqCounts,

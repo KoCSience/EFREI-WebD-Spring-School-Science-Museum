@@ -175,8 +175,8 @@ export default {
         //display error message in console
         console.log('error', error)
       }
-    },
-    purchace(user) {}
+    }
+    // purchace(user) {}
   }
 }
 </script>
