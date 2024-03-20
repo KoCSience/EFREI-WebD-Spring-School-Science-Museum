@@ -60,6 +60,7 @@ import axios from 'axios'
     <h2 style="color: white">Client: {{ user.email }}</h2>
     <button v-on:click="disconnect">disconnect</button>
   </article>
+  <br />
   <RouterView
     :articles="articles"
     :panier="panier"
