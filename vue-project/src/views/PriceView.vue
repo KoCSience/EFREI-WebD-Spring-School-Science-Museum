@@ -30,7 +30,7 @@
                               <input type="text" value="0" class="inputtext" id="textbox">
                               <button class="button" id="up" @click="increment()">＋</button>
                             </div>
-                            <button class="button resetbtn" id="reset" @click="reset()">RESET</button>
+                            <button class="button_resetbtn" id="reset" @click="reset()">RESET</button>
                           </div>
                           <!-- <script src="../components/counter.js"></script> -->
                         </body>
@@ -45,7 +45,7 @@
                               <input type="text" value="0" class="inputtext" id="textbox1">
                               <button class="button" id="up" @click="increment1()">＋</button>
                             </div>
-                            <button class="button resetbtn" id="reset" @click="reset1()">RESET</button>
+                            <button class="button_resetbtn" id="reset" @click="reset1()">RESET</button>
                           </div>
                           <!-- <script src="../components/counter.js"></script> -->
                         </body>
@@ -60,7 +60,7 @@
                             <input type="text" value="0" class="inputtext" id="textbox2">
                             <button class="button" id="up" @click="increment2()">＋</button>
                           </div>
-                          <button class="button resetbtn" id="reset" @click="reset2()">RESET</button>
+                          <button class="button_resetbtn" id="reset" @click="reset2()">RESET</button>
                         </div>
                         <!-- <script src="../components/counter.js"></script> -->
                       </body>
@@ -81,7 +81,7 @@
                     <input type="text" value="0" class="inputtext" id="textbox3">
                     <button class="button" id="up" @click="increment3()">＋</button>
                   </div>
-                  <button class="button resetbtn" id="reset" @click="reset3()">RESET</button>
+                  <button class="button_resetbtn" id="reset" @click="reset3()">RESET</button>
                 </div>
                 <!-- <script src="../components/counter.js"></script> -->
               </body>
@@ -97,7 +97,7 @@
                     <input type="text" value="0" class="inputtext" id="textbox4">
                     <button class="button" id="up" @click="increment4()">＋</button>
                   </div>
-                  <button class="button resetbtn" id="reset" @click="reset4()">RESET</button>
+                  <button class="button_resetbtn" id="reset" @click="reset4()">RESET</button>
                 </div>
                 <!-- <script src="../components/counter.js"></script> -->
               </body>
@@ -111,7 +111,7 @@
                     <input type="text" value="0" class="inputtext" id="textbox5">
                     <button class="button" id="up" @click="increment5()">＋</button>
                   </div>
-                  <button class="button resetbtn" id="reset" @click="reset5()">RESET</button>
+                  <button class="button_resetbtn" id="reset" @click="reset5()">RESET</button>
                 </div>
                 <!-- <script src="../components/counter.js"></script> -->
               </body>
@@ -126,7 +126,7 @@
                     <input type="text" value="0" class="inputtext" id="textbox6">
                     <button class="button" id="up" @click="increment6()">＋</button>
                   </div>
-                  <button class="button resetbtn" id="reset" @click="reset6()">RESET</button>
+                  <button class="button_resetbtn" id="reset" @click="reset6()">RESET</button>
                 </div>
                 <!-- <script src="../components/counter.js"></script> -->
               </body>
@@ -141,7 +141,7 @@
                     <input type="text" value="0" class="inputtext" id="textbox7">
                     <button class="button" id="up" @click="increment7()">＋</button>
                   </div>
-                  <button class="button resetbtn" id="reset" @click="reset7()">RESET</button>
+                  <button class="button_resetbtn" id="reset" @click="reset7()">RESET</button>
                 </div>
                 <!-- <script src="../components/counter.js"></script> -->
               </body>
@@ -151,9 +151,11 @@
         <!-- <p>This is App.</p> -->
       </div>
     </ul>
+    <button class="button_paymentbtn" id="payment" @click="payment()">PAYMENT</button>
   </div>
 
 </template>
+
 <script>
 export default {
   name: 'PriceView',
@@ -278,7 +280,6 @@ export default {
       const text = document.getElementById('textbox7');
       text.value = 0;
     }
-    
   }
 }
 </script>
@@ -429,7 +430,14 @@ body {
   outline: 0;
 }
 
-.resetbtn {
+.button_resetbtn {
+  margin: 20px 0 0 65px;
+}
+
+.button_paymentbtn {
+  float: right;
+  width: 30vw;
+  height: 50px;
   margin: 20px 0 0 65px;
 }
 
