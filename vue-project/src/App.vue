@@ -1,5 +1,6 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
+import axios from 'axios'
 </script>
 
 <template>
@@ -42,7 +43,7 @@ import { RouterLink, RouterView } from 'vue-router'
               <ul class="menu-child"></ul>
             </li>
             <li>
-              <a href="#"><RouterLink to="/login">Login</RouterLink></a>
+              <a href="#"><RouterLink to="/login">login</RouterLink></a>
               <ul class="menu-child"></ul>
             </li>
           </ul>
@@ -55,7 +56,22 @@ import { RouterLink, RouterView } from 'vue-router'
     </div>
   </header>
   <br />
-  <RouterView />
+  <article v-if="connected" class="flex jc-around a-center border-black">
+    <h2 style="color: white">Client: {{ user.email }}</h2>
+    <button v-on:click="disconnect">disconnect</button>
+  </article>
+  <RouterView
+    :articles="articles"
+    :panier="panier"
+    :message-error="messageError"
+    :connected="connected"
+    @add-article="addArticle"
+    @delete-article="deleteArticle"
+    @update-article="updateArticle"
+    @login="login"
+    @signup="signup"
+  ></RouterView>
+  <!-- <RouterView /> -->
   <br />
   <p class="empty"></p>
   <br />
@@ -83,6 +99,116 @@ import { RouterLink, RouterView } from 'vue-router'
     <p>© All rights created by Ko.</p>
   </footer>
 </template>
+
+<script>
+export default {
+  name: 'App',
+  data: () => {
+    return {
+      articles: [],
+      panier: {
+        createdAt: null,
+        updatedAt: null,
+        articles: []
+      },
+      messageError: null,
+      user: null,
+      connected: false
+    }
+  },
+  async mounted() {
+    //get articles
+    const res = await axios.get('/api/articles')
+    this.articles = res.data
+
+    //update connexion mode
+    try {
+      this.user = (await axios.get('/api/connecion')).data //verify connexion mode
+      console.log('user: ', this.user)
+      if (this.user === null || this.user == {} || this.user.email == null) {
+        console.log('user is null')
+      } else {
+        console.log('')
+        this.connected = true //update connexion mode
+      }
+    } catch (error) {
+      if (error.response.statusCode === 401) {
+        //deconnected
+        this.connected = false
+      } else {
+        //Display error message console
+        console.log('error', error)
+      }
+    }
+    // const res2 = await axios.get('/api/panier')
+    // this.panier = res2.data
+    console.log('connected: ', this.connected)
+  },
+  methods: {
+    async addArticle(article) {
+      const res = await axios.post('/api/article', article).catch((error) => {
+        // [Note] that the output of error here is not an object [error.response is an object].
+        console.log(error)
+        if (error.response) {
+          // The request was sent, but the server responded with a status code that was not in the 2xx range.
+          console.log(error.response.data)
+          // console.log(error.response.status);
+          // console.log(error.response.headers);
+        }
+        console.log(error.config)
+      })
+      this.articles.push(res.data) //Add article in the list
+    },
+    async updateArticle(newArticle) {
+      await axios.put('/api/article/' + newArticle.id, newArticle)
+      const article = this.articles.find((a) => a.id === newArticle.id)
+      article.name = newArticle.name
+      article.description = newArticle.description
+      article.image = newArticle.image
+      article.price = newArticle.price
+    },
+    async deleteArticle(articleId) {
+      await axios.delete('/api/article/' + articleId)
+      const index = this.articles.findIndex((a) => a.id === articleId)
+      this.articles.splice(index, 1)
+    },
+    async login(user) {
+      console.log('app func LOGIN ')
+      try {
+        this.user = (await axios.post('/api/login', user)).data //get user information
+        console.log('app func LOGIN post /api/login')
+        this.connected = true //change connexion mode
+        this.$router.push('/').catch(() => {}) //go to home page
+      } catch (error) {
+        //display error message
+        this.messageError = error.response.data.message
+      }
+    },
+    async signup(user) {
+      console.log('app func SIGNUP ')
+      try {
+        this.user = (await axios.post('/api/signup', user)).data //get user information
+        console.log('app func LOGIN post /api/signup')
+        this.connected = true //change connexion mode
+        this.$router.push('/').catch(() => {}) //go to home page
+      } catch (error) {
+        //display error message
+        this.messageError = error.response.data.message
+      }
+    },
+    async disconnect() {
+      try {
+        await axios.get('/api/disconnecion') //recall function to disconnect
+        this.connected = false //change connection mode
+        this.$router.push('/').catch(() => {}) //jump to home page
+      } catch (error) {
+        //display error message in console
+        console.log('error', error)
+      }
+    }
+  }
+}
+</script>
 
 <style scoped>
 * {
