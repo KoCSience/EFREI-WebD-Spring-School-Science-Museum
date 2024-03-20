@@ -1,0 +1,15 @@
+{
+  // エディター上での空白文字の表示方法
+  "editor.renderWhitespace": "all",
+  // 1つのタブに相当する半角スペースの数
+  "editor.tabSize": 4,
+  // ファイル保存時に最終行以降の空行を削除
+  "files.trimFinalNewlines": true,
+  // ファイル保存時に各行の末尾にある半角スペースを削除
+  "files.trimTrailingWhitespace": true,
+
+  // format設定
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "modificationsIfAvailable"
+}
