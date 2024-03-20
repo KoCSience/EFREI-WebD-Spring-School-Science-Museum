@@ -66,9 +66,6 @@ import axios from 'axios'
     :basket="basket"
     :message-error="messageError"
     :connected="connected"
-    @add-article="addArticle"
-    @delete-article="deleteArticle"
-    @update-article="updateArticle"
     @login="login"
     @signup="signup"
   ></RouterView>
@@ -106,11 +103,11 @@ export default {
   name: 'App',
   data: () => {
     return {
-      articles: [],
-      panier: {
-        createdAt: null,
-        updatedAt: null,
-        articles: []
+      cart: {
+        // Entryの大人、子供、学生、Event1、Event2の数量
+        counts: [0, 0, 0, 0, 0, 0, 0, 0, 0],
+        // Entryの大人、子供、学生、Event1、Event2の価格
+        prices: [30, 20, 10, 10, 5, 10, 5, 10, 5]
       },
       messageError: null,
       user: null,
@@ -119,8 +116,8 @@ export default {
   },
   async mounted() {
     //get articles
-    const res = await axios.get('/api/articles')
-    this.articles = res.data
+    // const res = await axios.get('/api/articles')
+    // this.articles = res.data
     //update connexion mode
     try {
       this.user = (await axios.get('/api/connecion')).data //verify connexion mode
@@ -145,33 +142,6 @@ export default {
     console.log('connected: ', this.connected)
   },
   methods: {
-    async addArticle(article) {
-      const res = await axios.post('/api/article', article).catch((error) => {
-        // [Note] that the output of error here is not an object [error.response is an object].
-        console.log(error)
-        if (error.response) {
-          // The request was sent, but the server responded with a status code that was not in the 2xx range.
-          console.log(error.response.data)
-          // console.log(error.response.status);
-          // console.log(error.response.headers);
-        }
-        console.log(error.config)
-      })
-      this.articles.push(res.data) //Add article in the list
-    },
-    async updateArticle(newArticle) {
-      await axios.put('/api/article/' + newArticle.id, newArticle)
-      const article = this.articles.find((a) => a.id === newArticle.id)
-      article.name = newArticle.name
-      article.description = newArticle.description
-      article.image = newArticle.image
-      article.price = newArticle.price
-    },
-    async deleteArticle(articleId) {
-      await axios.delete('/api/article/' + articleId)
-      const index = this.articles.findIndex((a) => a.id === articleId)
-      this.articles.splice(index, 1)
-    },
     async login(user) {
       console.log('app func LOGIN ')
       try {
@@ -196,16 +166,17 @@ export default {
         this.messageError = error.response.data.message
       }
     },
-    async disconnect() {
+    async logout() {
       try {
-        await axios.get('/api/disconnecion') //recall function to disconnect
+        await axios.get('/api/logout') //recall function to disconnect
         this.connected = false //change connection mode
         this.$router.push('/').catch(() => {}) //jump to home page
       } catch (error) {
         //display error message in console
         console.log('error', error)
       }
-    }
+    },
+    purchace(user) {}
   }
 }
 </script>
