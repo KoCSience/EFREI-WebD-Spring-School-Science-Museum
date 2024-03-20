@@ -44,18 +44,21 @@ defineProps({
         <nav>
           <ul class="news_menu">
             <li>
-              <a href="#">News1............</a>
+              <a href="#">Area construction underway</a>
             </li>
             <!-- contents -->
             <li>
-              <a href="#">News2............</a>
+              <a href="#">Site maintenance notice Unavailable at that time</a>
             </li>
             <!-- map -->
             <li>
-              <a href="#">News3............</a>
+              <a href="#">Alert about nuisance behavior in the facility</a>
             </li>
             <li>
-              <a href="#">News4............</a>
+              <a href="#"
+                >Regarding reservations during the year-end and New Year holidays and busy
+                seasons</a
+              >
             </li>
             <!-- contents -->
             <li>

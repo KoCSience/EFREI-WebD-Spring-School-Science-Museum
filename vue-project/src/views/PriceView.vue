@@ -20,12 +20,28 @@
         </div>
       </div>
       <div class="purchase_item">
-        Event1 - 10￡ <button @click="increment(3)">＋</button> {{ counts[3] }}
+        See-through food - 10￡ <button @click="increment(3)">＋</button> {{ counts[3] }}
         <button @click="decrement(3)">－</button>
       </div>
       <div class="purchase_item">
-        Event2 - 5￡ <button @click="increment(4)">＋</button> {{ counts[4] }}
+        Illumination - 5￡ <button @click="increment(4)">＋</button> {{ counts[4] }}
         <button @click="decrement(4)">－</button>
+      </div>
+      <div class="purchase_item">
+        Japan collaboration - 10￡ <button @click="increment(5)">＋</button> {{ counts[5] }}
+        <button @click="decrement(5)">－</button>
+      </div>
+      <div class="purchase_item">
+        Accommodation Campaign - 5￡ <button @click="increment(6)">＋</button> {{ counts[6] }}
+        <button @click="decrement(6)">－</button>
+      </div>
+      <div class="purchase_item">
+        Music Fes - 10￡ <button @click="increment(7)">＋</button> {{ counts[7] }}
+        <button @click="decrement(7)">－</button>
+      </div>
+      <div class="purchase_item">
+        Retro games - 5￡ <button @click="increment(8)">＋</button> {{ counts[8] }}
+        <button @click="decrement(8)">－</button>
       </div>
     </div>
     <div>
@@ -41,9 +57,9 @@ export default {
   data() {
     return {
       // Entryの大人、子供、学生、Event1、Event2の数量
-      counts: [0, 0, 0, 0, 0],
+      counts: [0, 0, 0, 0, 0, 0, 0, 0, 0],
       // Entryの大人、子供、学生、Event1、Event2の価格
-      prices: [30, 20, 10, 10, 5]
+      prices: [30, 20, 10, 10, 5, 10, 5, 10, 5]
     }
   },
   computed: {
@@ -63,7 +79,7 @@ export default {
     purchase() {
       if (this.totalAmount > 0) {
         alert(`You purchased tickets for a total of ${this.totalAmount}￡.`)
-        this.counts = [0, 0, 0, 0, 0] // 購入後、数量をリセット
+        this.counts = [0, 0, 0, 0, 0, 0, 0, 0, 0] // 購入後、数量をリセット
       } else {
         alert('購入するチケットの枚数を選択してください。')
       }

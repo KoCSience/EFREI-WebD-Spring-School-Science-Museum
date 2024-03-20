@@ -309,7 +309,7 @@ nav {
 
 .menu a {
   display: block;
-  padding: 1rem;
+  padding: 0.5rem;
   color: white;
 }
 
@@ -325,7 +325,7 @@ nav {
 
 .menu-child {
   position: absolute;
-  top: 5rem;
+  top: 3rem;
   left: 0px;
   width: 100%;
   box-shadow: 0 4px 0.3125rem rgba(0, 0, 0, 0.3);

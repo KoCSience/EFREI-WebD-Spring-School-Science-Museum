@@ -46,6 +46,7 @@
 h2 {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
+  line-height: 1;
 }
 
 #accessmap {
