@@ -13,8 +13,8 @@ import axios from 'axios'
             <li>
               <a href="#"><RouterLink to="/">Top</RouterLink></a>
               <ul class="menu-child">
-                <li><a href="#">こんな感じで</a></li>
-                <li><a href="#">メニュー表示もできるよ✌</a></li>
+                <li><a href="#">Like this</a></li>
+                <li><a href="#">It is also possible to display the menu</a></li>
               </ul>
             </li>
             <!-- contents -->
@@ -57,13 +57,13 @@ import axios from 'axios'
   </header>
   <br />
   <article v-if="connected" class="flex jc-around a-center border-black">
-    <h2 style="color: white">Client: {{ user.email }}</h2>
-    <button v-on:click="disconnect">disconnect</button>
+    <h2>Client :{{ user.email }}</h2>
+    <button v-on:click="deconnect">déconnecter</button>
   </article>
-  <br />
+  <br>
   <RouterView
     :articles="articles"
-    :basket="basket"
+    :panier="panier"
     :message-error="messageError"
     :connected="connected"
     @add-article="addArticle"
@@ -72,8 +72,7 @@ import axios from 'axios'
     @login="login"
     @signup="signup"
   ></RouterView>
-  <br />
-  <p class="empty"></p>
+  <!-- <RouterView /> -->
   <br />
   <!-- footer -->
   <footer>
@@ -106,31 +105,26 @@ export default {
   data: () => {
     return {
       articles: [],
-      basket: {
+      panier: {
         createdAt: null,
         updatedAt: null,
         articles: []
       },
       messageError: null,
-      user: null,
+      user: {},
       connected: false
     }
   },
   async mounted() {
     //get articles
     const res = await axios.get('/api/articles')
+
     this.articles = res.data
 
     //update connexion mode
     try {
       this.user = (await axios.get('/api/connecion')).data //verify connexion mode
-      console.log('user: ', this.user)
-      if (this.user === null || this.user == {} || this.user.email == null) {
-        console.log('user is null')
-      } else {
-        console.log('')
-        this.connected = true //update connexion mode
-      }
+      this.connected = true //update connexion mode
     } catch (error) {
       if (error.response.statusCode === 401) {
         //deconnected
@@ -140,9 +134,8 @@ export default {
         console.log('error', error)
       }
     }
-    // const res2 = await axios.get('/api/basket')
-    // this.basket = res2.data
-    console.log('connected: ', this.connected)
+    // const res2 = await axios.get('/api/panier')
+    // this.panier = res2.data
   },
   methods: {
     async addArticle(article) {
@@ -196,9 +189,9 @@ export default {
         this.messageError = error.response.data.message
       }
     },
-    async disconnect() {
+    async deconnect() {
       try {
-        await axios.get('/api/disconnecion') //recall function to disconnect
+        await axios.get('/api/deconnecion') //recall function to disconnect
         this.connected = false //change connection mode
         this.$router.push('/').catch(() => {}) //jump to home page
       } catch (error) {
@@ -285,10 +278,6 @@ h1 {
   width: 80vw;
   min-width: 768px;
   background-color: #f5f5f5;
-}
-
-.empty {
-  margin-bottom: 500px;
 }
 
 nav {
