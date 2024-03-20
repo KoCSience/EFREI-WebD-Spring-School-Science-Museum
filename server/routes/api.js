@@ -596,4 +596,7 @@ async function hash(password) {
   return hashedPassword;
 }
 
-module.exports = router;
+module.exports = {
+  router,
+  sequelize,
+};
