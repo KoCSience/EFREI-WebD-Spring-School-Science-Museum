@@ -57,8 +57,8 @@ import axios from 'axios'
   </header>
   <br />
   <article v-if="connected" class="flex jc-around a-center border-black">
-    <h2>Client :{{ user.email }}</h2>
-    <button v-on:click="deconnect">déconnecter</button>
+    <h2 style="color: white">Client: {{ user.email }}</h2>
+    <button v-on:click="disconnect">disconnect</button>
   </article>
   <RouterView
     :articles="articles"
@@ -110,7 +110,7 @@ export default {
         articles: []
       },
       messageError: null,
-      user: {},
+      user: null,
       connected: false
     }
   },
@@ -122,7 +122,13 @@ export default {
     //update connexion mode
     try {
       this.user = (await axios.get('/api/connecion')).data //verify connexion mode
-      this.connected = true //update connexion mode
+      console.log('user: ', this.user)
+      if (this.user === null || this.user == {} || this.user.email == null) {
+        console.log('user is null')
+      } else {
+        console.log('')
+        this.connected = true //update connexion mode
+      }
     } catch (error) {
       if (error.response.statusCode === 401) {
         //deconnected
@@ -134,6 +140,7 @@ export default {
     }
     // const res2 = await axios.get('/api/panier')
     // this.panier = res2.data
+    console.log('connected: ', this.connected)
   },
   methods: {
     async addArticle(article) {
@@ -187,9 +194,9 @@ export default {
         this.messageError = error.response.data.message
       }
     },
-    async deconnect() {
+    async disconnect() {
       try {
-        await axios.get('/api/deconnecion') //recall function to disconnect
+        await axios.get('/api/disconnecion') //recall function to disconnect
         this.connected = false //change connection mode
         this.$router.push('/').catch(() => {}) //jump to home page
       } catch (error) {

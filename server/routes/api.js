@@ -214,7 +214,7 @@ router.get("/connecion", (req, res) => {
 /**
  * This route allows the user to disconnect
  */
-router.get("/deconnecion", (req, res) => {
+router.get("/disconnecion", (req, res) => {
   //if the user is not logged in
   if (typeof req.session.userId != "undefined") {
     //free session to disconnect
