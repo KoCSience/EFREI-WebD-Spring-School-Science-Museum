@@ -63,7 +63,10 @@ router.post("/purchace", (req, res) => {
     return;
   }
 
-  // success
+  // -- success --
+
+  console.log("[purchace] user: " + reqUser.email + " bought " + total);
+
   // Carts.update({
   //   user_email: reqUser.email,
   //   total: total,

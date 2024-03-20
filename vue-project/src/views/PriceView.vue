@@ -1,5 +1,6 @@
 <script setup>
 import axios from 'axios'
+const props = defineProps(['user'])
 </script>
 
 <template>
@@ -53,7 +54,7 @@ import axios from 'axios'
     <div>
       <h3>sum: {{ totalAmount }}￡</h3>
       <button @click="purchase">Purchase</button>
-      <p>user: {{ user.email }}</p>
+      <p>user: {{ props.user.email }}</p>
     </div>
   </div>
 </template>
@@ -61,7 +62,6 @@ import axios from 'axios'
 <script>
 export default {
   name: 'PriceView',
-  props: ['user'],
   data() {
     return {
       cart: {
@@ -90,13 +90,16 @@ export default {
       }
     },
     async purchase() {
+      // console.log('USER: ', this.user)
+
       if (this.totalAmount > 0) {
         const total = this.totalAmount
         try {
           const result = (
             await axios.post('/api/cart/purchace', {
               cart: this.cart,
-              total: total
+              total: total,
+              user: this.user
             })
           ).data //get user information
           alert(`You purchased tickets for a total of ${this.totalAmount}￡.`)
