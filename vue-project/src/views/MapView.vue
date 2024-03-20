@@ -471,6 +471,10 @@ p {
   margin-bottom: 0.1em;
 }
 
+.image-map img{
+  width: 50%;  
+}
+
 .image-map div {
   margin-bottom: 0.1em;
 }

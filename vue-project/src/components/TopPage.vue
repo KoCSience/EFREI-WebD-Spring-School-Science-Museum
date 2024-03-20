@@ -143,7 +143,6 @@ defineProps({
         </div>-->
       </div>
     </div>
-    <p class="empty"></p>
   </div>
 </template>
 
@@ -393,10 +392,6 @@ nav {
 
 #tab_title {
   margin-top: 0;
-}
-
-.empty {
-  margin-bottom: 500px;
 }
 
 body {

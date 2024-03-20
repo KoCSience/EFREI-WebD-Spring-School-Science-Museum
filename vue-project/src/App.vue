@@ -73,6 +73,8 @@ import axios from 'axios'
   ></RouterView>
   <!-- <RouterView /> -->
   <br />
+  <p class="empty"></p>
+  <br />
   <!-- footer -->
   <footer>
     <div id="container">
@@ -283,6 +285,10 @@ h1 {
   width: 80vw;
   min-width: 768px;
   background-color: #f5f5f5;
+}
+
+.empty {
+  margin-bottom: 500px;
 }
 
 nav {
