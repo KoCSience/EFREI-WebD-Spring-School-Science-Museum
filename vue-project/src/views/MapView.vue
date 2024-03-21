@@ -397,7 +397,7 @@
     </p>
     <p id="warehouse">This is Warehouse.</p>
     <p id="factory">This is Snack factory. You can watch robots at work!</p>
-    <p id="center_park">This is Central Saint Dogma Park.</p>
+    <p id="central_park">This is Central Saint Dogma Park.</p>
     <p id="hotel">
       This is Five STAR hotel.Learn about the history of gaming and the computer science technology
       used here!
