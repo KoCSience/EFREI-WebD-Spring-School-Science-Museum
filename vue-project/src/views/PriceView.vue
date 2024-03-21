@@ -54,7 +54,7 @@ const props = defineProps(['user'])
     <div>
       <h3>sum: {{ totalAmount }}￡</h3>
       <button @click="purchase">Purchase</button>
-      <p>user: {{ props.user.email }}</p>
+      <p>user: {{ showUserName(props.user) }} , {{ showUserTotal(props.user) }}</p>
     </div>
   </div>
 </template>
@@ -112,6 +112,20 @@ export default {
         }
       } else {
         alert('購入するチケットの枚数を選択してください。')
+      }
+    },
+    showUserName(user) {
+      if (user != null) {
+        return user.email
+      } else {
+        return '-'
+      }
+    },
+    showUserTotal(user) {
+      if (user != null) {
+        return user.total > 0 ? user.total : 0
+      } else {
+        return 0
       }
     }
   }

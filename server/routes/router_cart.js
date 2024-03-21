@@ -1,8 +1,7 @@
 const express = require("express");
 const router = express.Router();
 // const { Sequelize, DataTypes } = require("sequelize");
-// const { sequelize } = require("./api");
-// const {  } = require("./api");
+const { sequelize, User, findUser } = require("./api");
 
 // const Carts = sequelize.define("carts", {
 //   user_email: {
@@ -39,7 +38,7 @@ router.use((req, res, next) => {
   next();
 });
 
-router.post("/purchace", (req, res) => {
+router.post("/purchace", async (req, res) => {
   console.log("purchace");
   const reqCart = req.body.cart;
   const reqCounts = reqCart.counts;
@@ -64,6 +63,16 @@ router.post("/purchace", (req, res) => {
   }
 
   // -- success --
+  const result = findUser(reqUser);
+  if (result === null) {
+    //verify user existence
+    console.log("False : user does not exist");
+    res.status(404).json({ message: "False : user does not exist" });
+    return;
+  }
+  const user = result; //get user, non null
+  user.total += total;
+  await user.save(); // save
 
   console.log("[purchace] user: " + reqUser.email + " bought " + total);
 

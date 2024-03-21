@@ -50,6 +50,9 @@ const User = sequelize.define(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    total: {
+      type: DataTypes.INTEGER,
+    },
   },
   {
     // Other model options go here
@@ -215,8 +218,17 @@ router.get("/logout", (req, res) => {
   return;
 });
 
+async function findUser(user) {
+  const result = await User.findOne({
+    where: { email: user.email },
+  });
+  return result;
+}
+
 module.exports = {
   router,
   routerCart,
   sequelize,
+  User,
+  findUser,
 };
