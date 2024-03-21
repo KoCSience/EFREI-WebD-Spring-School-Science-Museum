@@ -128,8 +128,6 @@ router.get("/login", (req, res) => {
   console.log("get router login");
 });
 
-// TODO: 作成中
-// TODO: password to be as hash
 /**
  * This route allows users to connect
  */

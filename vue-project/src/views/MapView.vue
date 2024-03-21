@@ -477,7 +477,7 @@ p {
 }
 
 .map_image {
-  width: 80vw;
+  /* width: 80vw; */
 }
 
 .image-map p {

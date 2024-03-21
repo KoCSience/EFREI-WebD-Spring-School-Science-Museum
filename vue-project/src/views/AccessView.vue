@@ -50,7 +50,7 @@ h2 {
 }
 
 #accessmap {
-  width: 800px;
+  width: 600px;
   margin-left: auto;
 }
 </style>

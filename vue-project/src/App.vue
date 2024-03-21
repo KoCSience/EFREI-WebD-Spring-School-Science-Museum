@@ -58,7 +58,7 @@ import axios from 'axios'
   <br />
   <article v-if="connected" class="flex jc-around a-center border-black">
     <h2 style="color: white">Client: {{ user.email }}</h2>
-    <button v-on:click="disconnect">disconnect</button>
+    <button v-on:click="logout">disconnect</button>
   </article>
   <br />
   <RouterView
