@@ -3,9 +3,14 @@ const { sequelize } = require("./api");
 
 class Basket {
   constructor() {
-    this.createdAt = new Date();
-    this.updatedAt = new Date();
+    // this.createdAt = new Date();
+    // this.updatedAt = new Date();
     this.articles = [];
+
+    // Entryの大人、子供、学生、Event1、Event2の数量
+    this.counts = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+    // Entryの大人、子供、学生、Event1、Event2の価格
+    this.prices = [30, 20, 10, 10, 5, 10, 5, 10, 5];
   }
 }
 
@@ -162,9 +167,9 @@ router.post("/basket/pay", (req, res) => {
  * The body must contain the desired quantity
  */
 router.put("/basket/:articleId", (req, res) => {
-  var basket = req.session.basket.articles;
-  const id = parseInt(req.params.articleId);
-  const quantite = parseInt(req.body.quantite);
+  // var basket = req.session.basket.articles;
+  // const id = parseInt(req.params.articleId);
+  // const quantite = parseInt(req.body.quantite);
 
   //quantity validity
   if (!Number.isInteger(quantite) || isNaN(quantite) || quantite < 1) {

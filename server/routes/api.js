@@ -2,10 +2,11 @@ const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcrypt");
 const useBcrypt = require("sequelize-bcrypt");
-const articles = require("../data/articles.js");
+// const articles = require("../data/articles.js");
 // const dbuser = require("./dbuser.js");
 const utils = require("../utils.js");
 const saltRounds = 10;
+const routerCart = require("./router_cart");
 
 // const { Sequelize } = require("sequelize");
 // const sequelize = new Sequelize("test", dbuser.user, dbuser.password, {
@@ -199,7 +200,7 @@ router.get("/connecion", (req, res) => {
 /**
  * This route allows the user to disconnect
  */
-router.get("/disconnecion", (req, res) => {
+router.get("/logout", (req, res) => {
   //if the user is not logged in
   if (typeof req.session.userId != "undefined") {
     //free session to disconnect
@@ -216,5 +217,6 @@ router.get("/disconnecion", (req, res) => {
 
 module.exports = {
   router,
+  routerCart,
   sequelize,
 };

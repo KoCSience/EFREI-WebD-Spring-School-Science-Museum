@@ -5,6 +5,7 @@ const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 
 const { router: apiRouter } = require("./routes/api.js");
+const { router: cartRouter } = require("./routes/router_cart.js");
 
 const app = express();
 
@@ -35,5 +36,6 @@ app.get("favicon.ico", (req, res) => {
 });
 
 app.use("/api/", apiRouter);
+app.use("/api/cart", cartRouter);
 
 module.exports = app;
