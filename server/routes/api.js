@@ -124,10 +124,6 @@ router.post("/login", async (req, res) => {
   }
 });
 
-router.get("/login", (req, res) => {
-  console.log("get router login");
-});
-
 /**
  * This route allows users to connect
  */
