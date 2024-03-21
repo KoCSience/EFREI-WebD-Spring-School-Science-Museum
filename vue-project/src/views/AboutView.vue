@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="content">
     <h1>About</h1>
     <br />
     <p>
@@ -32,23 +32,11 @@
   font-weight: lighter;
 }
 
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /*中央揃え*/
-  gap: 20px; /* コンテンツ間の隙間を設定 */
-  height: auto;
-}
-
 .content {
   border: 0px solid #ddd;
   color: white;
   position: relative; /* +ボタンを絶対位置で配置するための基準点とする */
-  width: calc(30.333% - 10px); /* 3つ並べるときの幅を計算 */
-  margin-bottom: 10px; /* 下マージン */
-  display: flex; /* フレックスボックスを使用 */
-  flex-direction: column; /* 子要素を縦方向に並べる */
-  justify-content: flex-start; /* 子要素の間隔を最大にする */
+  text-align: center;
 }
 
 .content img {
