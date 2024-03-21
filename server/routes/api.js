@@ -218,17 +218,24 @@ router.get("/logout", (req, res) => {
   return;
 });
 
-async function findUser(user) {
+router.get("/user", async (req, res) => {
+  const user = req.session.user;
   const result = await User.findOne({
     where: { email: user.email },
   });
-  return result;
-}
+  if (result == null) {
+    //send failure message to user
+    res.status(404).json({ error: "cannot found user" });
+    return;
+  }
+
+  res.status(200).json({ message: "ok", user: result });
+  return;
+});
 
 module.exports = {
   router,
   routerCart,
   sequelize,
   User,
-  findUser,
 };

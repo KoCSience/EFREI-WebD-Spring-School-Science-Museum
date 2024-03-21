@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 // const { Sequelize, DataTypes } = require("sequelize");
-const { sequelize, User, findUser } = require("./api");
+const axios = require("axios");
 
 // const Carts = sequelize.define("carts", {
 //   user_email: {
@@ -63,7 +63,8 @@ router.post("/purchace", async (req, res) => {
   }
 
   // -- success --
-  const result = findUser(reqUser);
+  // this.user = (await axios.get('/api/user', )).data //verify connexion mode
+  // const result =
   if (result === null) {
     //verify user existence
     console.log("False : user does not exist");
