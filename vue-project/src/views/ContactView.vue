@@ -1,23 +1,10 @@
 <template>
   <div class="container">
-    <h1>About</h1>
+    <h1>Contact</h1>
     <br />
-    <p>
-      **[Company name/Organization name]** is a [Company/Organization] that was established in [Year
-      of Establishment] and specializes in [Industry/Field]. We have a [concise mission statement or
-      purpose] and serve [key customer groups or markets]. our vision Our vision is [Be specific
-      about your vision]. To realize this vision, we are working on [key strategies and approaches
-      to implement]. our mission Our mission is [specific mission]. We reflect this mission in our
-      daily work through [specific actions and initiatives]. our value We value [Values ​​1],
-      [Values ​​2], and [Values ​​3]. These values ​​are at the core of our culture and the basis of
-      all decisions we make. our team Our team is made up of professionals with diverse backgrounds
-      who have [team characteristics and strengths]. Each member has high expertise in [specific
-      field or skill] and works together to achieve [goal or mission].
-    </p>
+    <p>email: test@jp</p>
     <br />
-    <p>
-      <a href="#"><RouterLink to="/contact">Contact us</RouterLink></a>
-    </p>
+    <p>phone: 0000000</p>
   </div>
 </template>
 
@@ -33,9 +20,10 @@
 }
 
 .container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /*中央揃え*/
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  text-align: center;
+  /* justify-content: center; 中央揃え */
   gap: 20px; /* コンテンツ間の隙間を設定 */
   height: auto;
 }

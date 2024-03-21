@@ -81,11 +81,11 @@ import axios from 'axios'
         <ul class="footer_menu">
           <!-- About us -->
           <li>
-            <a href="#"><RouterLink to="/aboutus">About us</RouterLink></a>
+            <a href="#"><RouterLink to="/about">About us</RouterLink></a>
           </li>
           <!-- Contact us -->
           <li>
-            <a href="#"><RouterLink to="/">Contact us</RouterLink></a>
+            <a href="#"><RouterLink to="/contact">Contact us</RouterLink></a>
           </li>
           <!-- access -->
           <li>
