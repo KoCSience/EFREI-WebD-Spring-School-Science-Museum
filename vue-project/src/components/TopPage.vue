@@ -77,9 +77,9 @@ defineProps({
       <p>price</p>
     </div>
     <ul class="price_content">
-      <li>Children : xxx￡~</li>
-      <li>Students : xxx￡~</li>
-      <li>Adults : xxx￡~</li>
+      <li>Children : 10￡~</li>
+      <li>Students : 20￡~</li>
+      <li>Adults : 30￡~</li>
     </ul>
 
     <div id="access_container">

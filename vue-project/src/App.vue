@@ -81,7 +81,7 @@ import axios from 'axios'
         <ul class="footer_menu">
           <!-- About us -->
           <li>
-            <a href="#"><RouterLink to="/">About us</RouterLink></a>
+            <a href="#"><RouterLink to="/aboutus">About us</RouterLink></a>
           </li>
           <!-- Contact us -->
           <li>
