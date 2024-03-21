@@ -29,11 +29,10 @@ defineProps({
         <div id="tabpage_price">…… price ……</div>
      </div>-->
     <div class="limited_title">
-      <p>limited time</p>
+      <p>Limtited content title!</p>
     </div>
     <ul class="limited_content">
-      <li>You can get 100$!</li>
-      <li>You can get 100$!</li>
+      <li>This is the limited content!</li>
     </ul>
 
     <div class="news_title">
